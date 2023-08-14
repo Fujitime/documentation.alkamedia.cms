@@ -1,5 +1,4 @@
 backend:
-  backend:
   name: github
   repo: Alkademi-Development/documentation.alkamedia.cms
   branch: master
