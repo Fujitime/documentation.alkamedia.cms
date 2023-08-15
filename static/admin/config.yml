@@ -1,3 +1,18 @@
+define: &_fields
+   - { name: "fungsional", label: "Fungsional"}
+   - { name: "gambar", label: "Gambar", widget: "image"}
+   - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "admin", label: "Admin", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "mentor", label: "Mentor", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "teacher", label: "Teacher", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "patner", label: "Patner", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "lead_program", label: "Lead Program", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "lead_region", label: "Lead Region", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "content_writer", label: "Content Writer", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "industri", label: "Industri", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "student", label: "Student", widget: "select", options: ["Allow","Pending","None"]} 
+   - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["Yes","Pending","No"]}
+
 backend:
   name: github
   repo: Alkademi-Development/documentation.alkamedia.cms
@@ -7,12 +22,226 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - label: "Authentication"
+    name: "fungsional"
+    editor: 
+      preview: false
+    folder: fungsional/authentication
+    create: true  
+    fields: *_fields
+
+  - label: "Dashboard"
+    name: "dashboard"
+    editor: 
+      preview: false
+    folder: "fungsional/dashboard"
     create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+    fields: *_fields
+
+  - label: "Schedule"
+    name: "schedule"
+    editor: 
+      preview: false
+    folder: "fungsional/schedule"
+    create: true
+    fields: *_fields
+
+  - label: "Schedule(Attendance)"
+    name: "schedule_attendance"
+    editor: 
+      preview: false
+    folder: "fungsional/schedule/attendance"
+    create: true
+    fields: *_fields
+
+  - label: "User"
+    name: "user"
+    editor: 
+      preview: false
+    folder: "fungsional/user"
+    create: true
+    fields: *_fields
+
+  - label: "Chat"
+    name: "chat"
+    editor: 
+      preview: false
+    folder: "fungsional/chat"
+    create: true
+    fields: *_fields
+
+  - label: "Program"
+    name: "program"
+    editor: 
+      preview: false
+    folder: "fungsional/program"
+    create: true
+    fields: *_fields
+
+  - label: "Classroom"
+    name: "classroom"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom"
+    create: true
+    fields: *_fields
+
+  - label: "Classroom(Attendance)"
+    name: "classroom_attendance"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/attendace"
+    create: true
+    fields: *_fields
+
+  - label: "Classroom(Overview)"
+    name: "classroom_overview"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/overview"
+    create: true
+    fields: *_fields
+
+  - label: "Classroom(Materi)"
+    name: "classroom_materi"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/materi"
+    create: true
+    fields: *_fields
+
+  - label: "Classroom(Tugas)"
+    name: "classroom_tugas"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/tugas"
+    create: true
+    fields: *_fields
+  
+  - label: "Classroom(Student/Hasil Belajar)"
+    name: "classroom_hasil_belajar"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/hasil_belajar"
+    create: true
+    fields: *_fields
+
+  - label: "Classroom(Peserta)"
+    name: "classroom_peserta"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/peserta"
+    create: true
+    fields: *_fields
+  
+  - label: "Classroom(Kegiatan)"
+    name: "classroom_kegiatan"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/kegiatan"
+    create: true
+    fields: *_fields
+
+  - label: "Classroom(Statistik)"
+    name: "classroom_statistik"
+    editor: 
+      preview: false
+    folder: "fungsional/classroom/statistik"
+    create: true
+    fields: *_fields
+
+  - label: "Review Tugas"
+    name: "review_tugas"
+    editor: 
+      preview: false
+    folder: "fungsional/review_tugas"
+    create: true
+    fields: *_fields
+
+  - label: "Rekap Nilai"
+    name: "rekap_nilai"
+    editor: 
+      preview: false
+    folder: "fungsional/rekap_nilai"
+    create: true
+    fields: *_fields    
+  
+  - label: "Form(Formulir)"
+    name: "form_formulir"
+    editor: 
+      preview: false
+    folder: "fungsional/form/formulir"
+    create: true
+    fields: *_fields
+  
+  - label: "Form(Bank Soal)"
+    name: "form_bank_soal"
+    editor: 
+      preview: false
+    folder: "fungsional/form/bank_soal"
+    create: true
+    fields: *_fields
+
+  - label: "Studio"
+    name: "studio"
+    editor: 
+      preview: false
+    folder: "fungsional/studio"
+    create: true
+    fields: *_fields
+
+  - label: "Event(Program)"
+    name: "event_program"
+    editor: 
+      preview: false
+    folder: "fungsional/event/program"
+    create: true
+    fields: *_fields
+
+  - label: "Event(Career)"
+    name: "event_career"
+    editor: 
+      preview: false
+    folder: "fungsional/event/career"
+    create: true
+    fields: *_fields
+
+  - label: "Blog"
+    name: "blog"
+    editor: 
+      preview: false
+    folder: "fungsional/blog"
+    create: true
+    fields: *_fields
+
+  - label: "Galeri"
+    name: "galeri"
+    editor: 
+      preview: false
+    folder: "fungsional/galeri"
+    create: true
+    fields: *_fields
+
+  - label: "Settings"
+    name: "settings"
+    editor: 
+      preview: false
+    folder: "fungsional/settings"
+    create: true
+    fields: *_fields
+  
+  - label: "Announcement"
+    name: "announcement"
+    editor: 
+      preview: false
+    folder: "fungsional/announcement"
+    create: true
+    fields: *_fields
+
+  - label: "Bantuan"
+    name: "bantuan"
+    editor: 
+      preview: false
+    folder: "fungsional/bantuan"
+    create: true
+    fields: *_fields
