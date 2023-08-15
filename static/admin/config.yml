@@ -1,4 +1,6 @@
 define: &_fields
+   - { name: "fungsional", label: "Fungsional"}
+   - { name: "gambar", label: "Gambar", widget: "image"}
    - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "admin", label: "Admin", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "mentor", label: "Mentor", widget: "select", options: ["Allow","Pending","None"]} 
@@ -9,7 +11,7 @@ define: &_fields
    - { name: "content_writer", label: "Content Writer", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "industri", label: "Industri", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "student", label: "Student", widget: "select", options: ["Allow","Pending","None"]} 
-   - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["yes","Pending","No"]}
+   - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["Yes","Pending","No"]}
 
 backend:
   name: github
