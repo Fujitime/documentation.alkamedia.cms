@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -23,7 +23,11 @@ interface Data {
       node: {
         frontmatter: {
           fungsional: string;
-          gambar: string;
+          gambar: {
+            childImageSharp: {
+              gatsbyImageData: any
+            }
+          };
           deskripsi: string;
           super_admin: string;
           admin: string;
@@ -51,7 +55,7 @@ interface NestedDir {
 const IndexPage: React.FC<{ data: Data}> = ({data}) => {
   const [showSidebar, setSidebar] = React.useState(false)
   let dirs: (NestedDir|string)[] = data.dirs.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
-  for(let edge of data.dirs.edges.filter(edge => edge.node.relativeDirectory.length > 0)){
+  for(let edge of data.dirs.edges.filter(edge => edge.node.name != "uploads" && edge.node.relativeDirectory.length > 0)){
     const i = dirs.findIndex(dir => typeof(dir) == 'string' ? dir == edge.node.relativeDirectory : dir.dir == edge.node.relativeDirectory)
     if(i >= 0){
       dirs[i] = {
@@ -72,7 +76,7 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
         </button>
       </nav>
 
-      <aside className={(showSidebar ? "" : "-translate-x-full") + " fixed top-0 left-0 z-40 w-64 h-screen transition-transform sm:translate-x-0"} aria-label="Sidebar">
+      <aside className={(showSidebar ? "" : "-translate-x-full") + " fixed top-0 left-0 z-40 w-[14.2rem] sm:w-64 h-screen transition-transform sm:translate-x-0"} aria-label="Sidebar">
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul className="space-y-2 font-medium">
               <li className="mb-4">
@@ -113,11 +117,13 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
         <ul>
           {data.docs.edges.map(edge => {
             const frontmatter = edge.node.frontmatter
+            const image = getImage(frontmatter.gambar.childImageSharp) as IGatsbyImageData
             return (
               <li key={edge.node.id} className="mb-4">
                 <div>
                   <h1 className="dark:text-slate-200 font-semibold mb-2">{frontmatter.fungsional}</h1>
-                  <div className="mb-4">
+                  <div className="mb-4 flex flex-wrap gap-2" >
+                    <GatsbyImage image={image} alt={frontmatter.fungsional}/>
                     <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
                   </div>
                   <div className="w-full overflow-x-auto">
@@ -182,7 +188,15 @@ export const query = graphql`query {
       node {
         frontmatter {
           fungsional
-          gambar 
+          gambar {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
           deskripsi
           super_admin
           admin
