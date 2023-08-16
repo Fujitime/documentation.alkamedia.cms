@@ -13,6 +13,37 @@ const config: GatsbyConfig = {
     "gatsby-plugin-netlify",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-postcss",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
+    // {
+    //   resolve: "gatsby-transformer-remark",
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: "gatsby-remark-images",
+    //         options: {
+    //           maxWidth: 800
+    //         }
+    //       }
+    //     ]
+    //   }
+    // },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/static/assets/uploads`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'md',
+        path: `${__dirname}/fungsional`
+      }
+    },
   ]
 };
 
