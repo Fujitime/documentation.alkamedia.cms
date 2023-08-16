@@ -1,4 +1,6 @@
 define: &_fields
+   - { name: "fungsional", label: "Fungsional"}
+   - { name: "gambar", label: "Gambar", widget: "image"}
    - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "admin", label: "Admin", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "mentor", label: "Mentor", widget: "select", options: ["Allow","Pending","None"]} 
@@ -9,237 +11,239 @@ define: &_fields
    - { name: "content_writer", label: "Content Writer", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "industri", label: "Industri", widget: "select", options: ["Allow","Pending","None"]} 
    - { name: "student", label: "Student", widget: "select", options: ["Allow","Pending","None"]} 
-   - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["yes","Pending","No"]}
-
+   - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["Yes","Pending","No"]}
 backend:
-  name: github
+  name: test-repo
   repo: Alkademi-Development/documentation.alkamedia.cms
-  branch: master
+  branch: dev
+local_backend: true
+  
 
-media_folder: static/assets
-public_folder: /assets
+media_folder: static/images
+public_folder: ../../static/images/
 
 collections:
   - label: "Authentication"
-    name: "fungsional"
-    editor: 
-      preview: false
-    folder: fungsional/authentication
+    name: "authentication"
+    preview: false
+    folder: "content/fungsional/authentication"
     create: true  
     fields: *_fields
+    slug: "{{slug}}"
+  
 
   - label: "Dashboard"
     name: "dashboard"
-    editor: 
-      preview: false
-    folder: "fungsional/dashboard"
+    preview: false
+    folder: "content/fungsional/dashboard"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Schedule"
     name: "schedule"
-    editor: 
-      preview: false
-    folder: "fungsional/schedule"
+    preview: false
+    folder: "content/fungsional/schedule"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Schedule(Attendance)"
     name: "schedule_attendance"
-    editor: 
-      preview: false
-    folder: "fungsional/schedule/attendance"
+    preview: false
+    folder: "content/fungsional/schedule/attendance"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "User"
     name: "user"
-    editor: 
-      preview: false
-    folder: "fungsional/user"
+    preview: false
+    folder: "content/fungsional/user"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Chat"
     name: "chat"
-    editor: 
-      preview: false
-    folder: "fungsional/chat"
+    preview: false
+    folder: "content/fungsional/chat"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Program"
     name: "program"
-    editor: 
-      preview: false
-    folder: "fungsional/program"
+    preview: false
+    folder: "content/fungsional/program"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Classroom"
     name: "classroom"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom"
+    preview: false
+    folder: "content/fungsional/classroom"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Classroom(Attendance)"
     name: "classroom_attendance"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/attendace"
+    preview: false
+    folder: "content/fungsional/classroom/attendace"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Classroom(Overview)"
     name: "classroom_overview"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/overview"
+    preview: false
+    folder: "content/fungsional/classroom/overview"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Classroom(Materi)"
     name: "classroom_materi"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/materi"
+    preview: false
+    folder: "content/fungsional/classroom/materi"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Classroom(Tugas)"
     name: "classroom_tugas"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/tugas"
+    preview: false
+    folder: "content/fungsional/classroom/tugas"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
   
   - label: "Classroom(Student/Hasil Belajar)"
     name: "classroom_hasil_belajar"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/hasil_belajar"
+    preview: false
+    folder: "content/fungsional/classroom/hasil_belajar"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Classroom(Peserta)"
     name: "classroom_peserta"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/peserta"
+    preview: false
+    folder: "content/fungsional/classroom/peserta"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
   
   - label: "Classroom(Kegiatan)"
     name: "classroom_kegiatan"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/kegiatan"
+    preview: false
+    folder: "content/fungsional/classroom/kegiatan"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Classroom(Statistik)"
     name: "classroom_statistik"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/statistik"
+    preview: false
+    folder: "content/fungsional/classroom/statistik"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Review Tugas"
     name: "review_tugas"
-    editor: 
-      preview: false
-    folder: "fungsional/review_tugas"
+    preview: false
+    folder: "content/fungsional/review_tugas"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Rekap Nilai"
     name: "rekap_nilai"
-    editor: 
-      preview: false
-    folder: "fungsional/rekap_nilai"
+    preview: false
+    folder: "content/fungsional/rekap_nilai"
     create: true
-    fields: *_fields    
+    fields: *_fields
+    slug: "{{slug}}"    
   
   - label: "Form(Formulir)"
     name: "form_formulir"
-    editor: 
-      preview: false
-    folder: "fungsional/form/formulir"
+    preview: false
+    folder: "content/fungsional/form/formulir"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
   
   - label: "Form(Bank Soal)"
     name: "form_bank_soal"
-    editor: 
-      preview: false
-    folder: "fungsional/form/bank_soal"
+    preview: false
+    folder: "content/fungsional/form/bank_soal"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Studio"
     name: "studio"
-    editor: 
-      preview: false
-    folder: "fungsional/studio"
+    preview: false
+    folder: "content/fungsional/studio"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Event(Program)"
     name: "event_program"
-    editor: 
-      preview: false
-    folder: "fungsional/event/program"
+    preview: false
+    folder: "content/fungsional/event/program"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Event(Career)"
     name: "event_career"
-    editor: 
-      preview: false
-    folder: "fungsional/event/career"
+    preview: false
+    folder: "content/fungsional/event/career"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Blog"
     name: "blog"
-    editor: 
-      preview: false
-    folder: "fungsional/blog"
+    preview: false
+    folder: "content/fungsional/blog"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Galeri"
     name: "galeri"
-    editor: 
-      preview: false
-    folder: "fungsional/galeri"
+    preview: false
+    folder: "content/fungsional/galeri"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Settings"
     name: "settings"
-    editor: 
-      preview: false
-    folder: "fungsional/settings"
+    preview: false
+    folder: "content/fungsional/settings"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
   
   - label: "Announcement"
     name: "announcement"
-    editor: 
-      preview: false
-    folder: "fungsional/announcement"
+    preview: false
+    folder: "content/fungsional/announcement"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
 
   - label: "Bantuan"
     name: "bantuan"
-    editor: 
-      preview: false
-    folder: "fungsional/bantuan"
+    preview: false
+    folder: "content/fungsional/bantuan"
     create: true
     fields: *_fields
+    slug: "{{slug}}"
