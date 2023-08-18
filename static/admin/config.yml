@@ -15,9 +15,11 @@ define: &_fields
    - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["Yes","Pending","No"] }
 
 backend:
-  name: github
-  repo: Alkademi-Development/documentation.alkamedia.cms
-  branch: master
+  name: test-repo #github
+  # repo: Alkademi-Development/documentation.alkamedia.cms
+  # branch: master
+
+local_backend: true
 
 media_folder: static/assets/uploads
 public_folder: ../assets/uploads
