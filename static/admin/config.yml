@@ -21,8 +21,8 @@ backend:
 
 local_backend: true
 
-media_folder: static/assets/uploads
-public_folder: ../assets/uploads
+media_folder: fungsional/uploads
+public_folder: ./uploads
 
 collections:
   - name: "authentication"
@@ -31,7 +31,6 @@ collections:
       preview: false
     folder: fungsional/authentication
     media_folder: uploads
-    public_folder: ./uploads
     create: true  
     fields: *_fields
 
@@ -41,7 +40,6 @@ collections:
       preview: false
     folder: "fungsional/dashboard"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -51,7 +49,6 @@ collections:
       preview: false
     folder: "fungsional/schedule"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -61,7 +58,6 @@ collections:
       preview: false
     folder: "fungsional/schedule/attendance"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -71,7 +67,6 @@ collections:
       preview: false
     folder: "fungsional/user"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -81,7 +76,6 @@ collections:
       preview: false
     folder: "fungsional/chat"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -91,7 +85,6 @@ collections:
       preview: false
     folder: "fungsional/program"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -101,7 +94,6 @@ collections:
       preview: false
     folder: "fungsional/materi"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -111,7 +103,6 @@ collections:
       preview: false
     folder: "fungsional/classroom"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -121,7 +112,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/attendace"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -131,7 +121,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/overview"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -141,7 +130,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/materi"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -151,7 +139,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/tugas"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
   
@@ -161,7 +148,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/hasil_belajar"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -171,7 +157,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/peserta"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
   
@@ -181,7 +166,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/kegiatan"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -191,7 +175,6 @@ collections:
       preview: false
     folder: "fungsional/classroom/statistik"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -201,7 +184,6 @@ collections:
       preview: false
     folder: "fungsional/review_tugas"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -211,7 +193,6 @@ collections:
       preview: false
     folder: "fungsional/rekap_nilai"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields    
   
@@ -221,7 +202,6 @@ collections:
       preview: false
     folder: "fungsional/form/formulir"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
   
@@ -231,7 +211,6 @@ collections:
       preview: false
     folder: "fungsional/form/bank_soal"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -241,7 +220,6 @@ collections:
       preview: false
     folder: "fungsional/studio"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -251,7 +229,6 @@ collections:
       preview: false
     folder: "fungsional/event/program"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -261,7 +238,6 @@ collections:
       preview: false
     folder: "fungsional/event/career"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -271,7 +247,6 @@ collections:
       preview: false
     folder: "fungsional/blog"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -281,7 +256,6 @@ collections:
       preview: false
     folder: "fungsional/galeri"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -291,7 +265,6 @@ collections:
       preview: false
     folder: "fungsional/settings"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
   
@@ -301,7 +274,6 @@ collections:
       preview: false
     folder: "fungsional/announcement"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
 
@@ -311,6 +283,5 @@ collections:
       preview: false
     folder: "fungsional/bantuan"
     media_folder: uploads
-    public_folder: ./uploads
     create: true
     fields: *_fields
