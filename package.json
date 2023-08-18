@@ -16,9 +16,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.15",
-    "flowbite": "^1.8.1",
     "gatsby": "^5.11.0",
-    "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-netlify-cms": "^7.11.0",
     "gatsby-plugin-postcss": "^6.11.0",

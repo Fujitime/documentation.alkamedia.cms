@@ -20,13 +20,6 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: `${__dirname}/static/assets/uploads`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'md',
         path: `${__dirname}/fungsional`
       }

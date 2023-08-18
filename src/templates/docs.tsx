@@ -1,5 +1,5 @@
 import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 
@@ -54,6 +54,7 @@ interface NestedDir {
 
 const IndexPage: React.FC<{ data: Data}> = ({data}) => {
   const [showSidebar, setSidebar] = React.useState(false)
+  const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
   let dirs: (NestedDir|string)[] = data.dirs.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
   for(let edge of data.dirs.edges.filter(edge => edge.node.name != "uploads" && edge.node.relativeDirectory.length > 0)){
     const i = dirs.findIndex(dir => typeof(dir) == 'string' ? dir == edge.node.relativeDirectory : dir.dir == edge.node.relativeDirectory)
@@ -86,30 +87,40 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
                   </Link>
               </li>
               {dirs.map((dir, index) => {
+              const dropdownId = `dropdown-${index}`;
                 return (
                   <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300">
                     { typeof dir == 'string' ? (
                       <Link to={"/" + dir}>{dir}</Link>
                     ) : (
                       <>
-                        <button type="button" className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown" data-collapse-toggle="dropdown">
-                          <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
-                          <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-                          </svg>
-                        </button>
-                        <ul id="dropdown" className="hidden py-2 space-y-2 ml-4">
-                          {dir.parents.map((_dir, index) => (
+                <button
+                  type="button"
+                  className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  aria-controls={dropdownId}
+                  data-collapse-toggle="dropdown"
+                  onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)} 
+                >
+                  <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
+                  <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+                </button>
+                      <ul
+                  id={dropdownId} 
+                  className={(showDropdown === dropdownId ? "" : "hidden") + " py-2 space-y-2 ml-4"}
+                >
+                  {dir.parents.map((_dir, index) => (
                             <li key={dir.dir + index}>
                               <Link to={"/" + _dir}>{_dir}</Link>
                             </li>
                           ))}
-                        </ul>
-                      </>
-                    )}
-                  </li>
-                )
-              })}
+                      </ul>
+                    </>
+                  )}
+          </li>
+        )
+      })}
             </ul>
         </div>
       </aside>
