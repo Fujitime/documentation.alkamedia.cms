@@ -1,5 +1,5 @@
 import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 
@@ -25,7 +25,7 @@ interface Data {
           fungsional: string;
           gambar: {
             childImageSharp: {
-              gatsbyImageData: any
+              gatsbyImageData: IGatsbyImageData
             }
           };
           deskripsi: string;
@@ -54,6 +54,7 @@ interface NestedDir {
 
 const IndexPage: React.FC<{ data: Data}> = ({data}) => {
   const [showSidebar, setSidebar] = React.useState(false)
+  const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
   let dirs: (NestedDir|string)[] = data.dirs.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
   for(let edge of data.dirs.edges.filter(edge => edge.node.name != "uploads" && edge.node.relativeDirectory.length > 0)){
     const i = dirs.findIndex(dir => typeof(dir) == 'string' ? dir == edge.node.relativeDirectory : dir.dir == edge.node.relativeDirectory)
@@ -67,7 +68,7 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
   
   return (
     <main style={pageStyles} className="bg-gray-100 dark:bg-gray-900 min-h-screen w-full">
-      <nav className="w-full bg-white dark:bg-gray-800 p-4 h-16 flex justify-end">
+      <nav className="fixed top-0 z-40 w-full bg-white dark:bg-gray-800 p-4 h-16 flex justify-end">
         <button type="button" onClick={() => setSidebar(!showSidebar)} className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span className="sr-only">Open sidebar</span>
           <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +77,7 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
         </button>
       </nav>
 
-      <aside className={(showSidebar ? "" : "-translate-x-full") + " fixed top-0 left-0 z-40 w-[14.2rem] sm:w-64 h-screen transition-transform sm:translate-x-0"} aria-label="Sidebar">
+      <aside className={(showSidebar ? "" : "-translate-x-full") + " fixed top-0 left-0 z-50 w-[14.2rem] sm:w-64 h-screen transition-transform sm:translate-x-0"} aria-label="Sidebar">
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul className="space-y-2 font-medium">
               <li className="mb-4">
@@ -86,30 +87,37 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
                   </Link>
               </li>
               {dirs.map((dir, index) => {
+              const dropdownId = `dropdown-${index}`;
                 return (
                   <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300">
                     { typeof dir == 'string' ? (
-                      <span className="m-2">{dir}</span>
+                      <Link to={"/" + dir}>{dir}</Link>
                     ) : (
                       <>
-                        <button type="button" className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown" data-collapse-toggle="dropdown">
+                        <button
+                          type="button"
+                          className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                          aria-controls={dropdownId}
+                          data-collapse-toggle="dropdown"
+                          onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)} 
+                        >
                           <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
                           <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                           </svg>
                         </button>
-                        <ul id="dropdown" className="hidden py-2 space-y-2 ml-4">
+                        <ul id={dropdownId} className={(showDropdown === dropdownId ? "" : "hidden") + " py-2 space-y-2 ml-4"}>
                           {dir.parents.map((_dir, index) => (
                             <li key={dir.dir + index}>
-                              {_dir}
+                              <Link to={"/" + _dir}>{_dir}</Link>
                             </li>
                           ))}
                         </ul>
                       </>
                     )}
                   </li>
-                )
-              })}
+                  )
+                })}
             </ul>
         </div>
       </aside>
@@ -122,8 +130,8 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
               <li key={edge.node.id} className="mb-4">
                 <div>
                   <h1 className="dark:text-slate-200 font-semibold mb-2">{frontmatter.fungsional}</h1>
-                  <div className="mb-4 flex flex-wrap gap-2" >
-                    <GatsbyImage image={image} alt={frontmatter.fungsional}/>
+                  <div className="mb-4 flex flex-wrap gap-2 z-0" >
+                    <GatsbyImage image={image} alt={frontmatter.fungsional} />
                     <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
                   </div>
                   <div className="w-full overflow-x-auto">
@@ -173,8 +181,8 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
 
 export default IndexPage
 
-export const query = graphql`query {
-  dirs: allDirectory(filter: {absolutePath: {regex: "/(fungsional)/"}}) {
+export const query = graphql`query($category: String) {
+  dirs: allDirectory(filter: {absolutePath: {regex: "/(fungsional\/)/"}}) {
     edges {
       node {
         name
@@ -183,7 +191,7 @@ export const query = graphql`query {
       }
     }
   }
-  docs: allMarkdownRemark {
+  docs: allMarkdownRemark (filter: {fileAbsolutePath: {regex: $category}}) {
     edges {
       node {
         frontmatter {
@@ -193,6 +201,7 @@ export const query = graphql`query {
               gatsbyImageData(
                 width: 200
                 placeholder: BLURRED
+                layout: FIXED
                 formats: [AUTO, WEBP, AVIF]
               )
             }
@@ -216,4 +225,4 @@ export const query = graphql`query {
   }
 }`
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>Documentations</title>

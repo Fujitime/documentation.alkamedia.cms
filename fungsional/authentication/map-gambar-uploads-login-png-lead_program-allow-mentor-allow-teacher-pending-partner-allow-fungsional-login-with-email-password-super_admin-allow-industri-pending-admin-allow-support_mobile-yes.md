@@ -1,7 +1,7 @@
 ---
 fungsional: Login with email & password
 gambar: uploads/login.png
-deskripsi: A﻿uthenticate to Alkademi with your own email and password
+deskripsi: L﻿ogin with your own email and password
 super_admin: Allow
 admin: Allow
 mentor: Allow
