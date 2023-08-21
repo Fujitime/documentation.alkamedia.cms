@@ -1,7 +1,12 @@
 ---
-fungsional: Login with email & password
+fungsional: text
 gambar: uploads/login.png
-deskripsi: L﻿ogin with your own email and password
+deskripsi: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+  eu dui enim. Sed vel ultrices libero. Aenean rutrum, quam eget rutrum tempor,
+  mauris elit accumsan risus, nec dignissim neque massa eget nunc. Curabitur
+  quis rutrum felis, eu convallis est. Nulla mollis metus ut augue finibus, et
+  pharetra neque commodo. Sed nec nisi ac sapien egestas convallis. Nam nec
+  vulputate nisl.
 super_admin: Allow
 admin: Allow
 mentor: Allow
