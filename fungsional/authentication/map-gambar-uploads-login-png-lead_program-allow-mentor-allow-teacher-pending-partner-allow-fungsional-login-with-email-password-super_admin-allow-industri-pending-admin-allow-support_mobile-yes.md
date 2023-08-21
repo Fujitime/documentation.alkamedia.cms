@@ -1,5 +1,5 @@
 ---
-fungsional: Login with email & password
+fungsional: text
 gambar: uploads/login.png
 deskripsi: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
   eu dui enim. Sed vel ultrices libero. Aenean rutrum, quam eget rutrum tempor,

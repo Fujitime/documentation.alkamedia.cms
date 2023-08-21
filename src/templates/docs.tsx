@@ -2,6 +2,7 @@ import * as React from "react"
 import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { forInRight } from "lodash"
 
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -157,15 +158,24 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
         </div>
       </aside>
       <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-8">
-        {/* <div className="mt-8 text-gray-700 dark:text-gray-300">
+        <div className="mt-8 text-gray-700 dark:text-gray-300">
           <h1 className="font-semibold text-3xl capitalize">{pageContext.pageName}</h1>
-        </div> */}
+          <ul className="max-w-md space-y-1 text-gray-500 list-none dark:text-gray-400">
+          {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
+            return (
+              <li key={edge.node.id} className="">
+              <Link to={"#" + edge.node.frontmatter.fungsional} ><span className="text-red-500" >#</span>{edge.node.frontmatter.fungsional} </Link>
+              </li>
+            )
+          })}
+        </ul>
+        </div>
         <ul>
           {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
             const frontmatter = edge.node.frontmatter
             const image = getImage(frontmatter.gambar.childImageSharp) as IGatsbyImageData
             return (
-              <li key={edge.node.id} className="mb-4">
+              <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4">
                 <div>
                   <h1 className="dark:text-slate-200 font-semibold mb-2">{frontmatter.fungsional}</h1>
                   <div className="mb-4 flex flex-wrap gap-2 z-0" >
