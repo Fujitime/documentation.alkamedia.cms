@@ -7,6 +7,26 @@ const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
+interface FrontMatter {
+  fungsional: string;
+  gambar: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  };
+  deskripsi: string;
+  super_admin: string;
+  admin: string;
+  mentor: string;
+  teacher: string;
+  partner: string;
+  lead_program: string;
+  lead_region: string;
+  content_writer: string;
+  industri: string;
+  student: string;
+  support_mobile: string;
+}
 
 interface Data {
   dirs: {
@@ -21,26 +41,7 @@ interface Data {
   docs: {
     edges: Array<{
       node: {
-        frontmatter: {
-          fungsional: string;
-          gambar: {
-            childImageSharp: {
-              gatsbyImageData: IGatsbyImageData
-            }
-          };
-          deskripsi: string;
-          super_admin: string;
-          admin: string;
-          mentor: string;
-          teacher: string;
-          partner: string;
-          lead_program: string;
-          lead_region: string;
-          content_writer: string;
-          industri: string;
-          student: string;
-          support_mobile: string;
-        };
+        frontmatter: FrontMatter;
         id: string;
       };
     }>;
@@ -52,8 +53,9 @@ interface NestedDir {
   parents: string[];
 }
 
-const IndexPage: React.FC<{ data: Data}> = ({data}) => {
-  const [showSidebar, setSidebar] = React.useState(false)
+const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({data, pageContext}) => {
+  const [role, setRole] = React.useState<string | keyof FrontMatter>("all");
+  const [showSidebar, setSidebar] = React.useState<boolean>(false)
   const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
   let dirs: (NestedDir|string)[] = data.dirs.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
   for(let edge of data.dirs.edges.filter(edge => edge.node.name != "uploads" && edge.node.relativeDirectory.length > 0)){
@@ -65,7 +67,6 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
       }
     }
   }
-  
   return (
     <main style={pageStyles} className="bg-gray-100 dark:bg-gray-900 min-h-screen w-full">
       <nav className="fixed top-0 z-40 w-full bg-white dark:bg-gray-800 p-4 h-16 flex justify-end">
@@ -86,19 +87,53 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
                     <span className="ml-3">Dokumentasi</span>
                   </Link>
               </li>
+              <li className="mb-4">
+              <button
+                type="button"
+                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                onClick={() => setShowDropdown(showDropdown === "role_filter" ? null : "role_filter")} 
+              >
+                <span className="flex-1 text-left whitespace-nowrap capitalize">{role == "all" ? "All Roles" : role.split("_").join(" ")}</span>
+                <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <ul id="filter_role" className={(showDropdown === "role_filter" ? "" : "hidden") + " py-2 space-y-2 ml-4 text-gray-700 dark:text-gray-300"}>
+              <li>
+                  <button type="button" onClick={() => {
+                    setRole("all")
+                    setShowDropdown(null)
+                    }
+                  }>
+                    All Roles
+                  </button>
+                </li>
+                {
+                  ["super_admin", "admin", "mentor", "teacher", "partner", "lead_program", "lead_region", "content_writer", "industri", "student"].map(r => (
+                  <li key={r}>
+                    <button type="button" onClick={() => {
+                      setRole(r)
+                      setShowDropdown(null);
+                      }
+                    } className="capitalize">
+                      {r.split("_").join(" ")}
+                    </button>
+                  </li>
+                  ))
+                }
+              </ul>
+              </li>
               {dirs.map((dir, index) => {
               const dropdownId = `dropdown-${index}`;
                 return (
                   <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300">
                     { typeof dir == 'string' ? (
-                      <Link to={"/" + dir}>{dir}</Link>
+                      <Link to={"/" + dir} className="p-3">{dir}</Link>
                     ) : (
                       <>
                         <button
                           type="button"
-                          className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                          aria-controls={dropdownId}
-                          data-collapse-toggle="dropdown"
+                          className="flex items-center w-full p-3 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                           onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)} 
                         >
                           <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
@@ -121,9 +156,12 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
             </ul>
         </div>
       </aside>
-      <div className="container sm:ml-64 mr-auto w-auto p-11">
+      <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-8">
+        {/* <div className="mt-8 text-gray-700 dark:text-gray-300">
+          <h1 className="font-semibold text-3xl capitalize">{pageContext.pageName}</h1>
+        </div> */}
         <ul>
-          {data.docs.edges.map(edge => {
+          {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
             const frontmatter = edge.node.frontmatter
             const image = getImage(frontmatter.gambar.childImageSharp) as IGatsbyImageData
             return (
@@ -135,38 +173,6 @@ const IndexPage: React.FC<{ data: Data}> = ({data}) => {
                     <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
                   </div>
                   <div className="w-full overflow-x-auto">
-                    <table className="table-auto w-full text-sm text-left text-gray-500 dark:text-gray-400 border-separate">
-                      <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                          <th scope="col" className="px-6 py-3">Super Admin</th>
-                          <th scope="col" className="px-6 py-3">Admin</th>
-                          <th scope="col" className="px-6 py-3">Mentor</th>
-                          <th scope="col" className="px-6 py-3">Teacher</th>
-                          <th scope="col" className="px-6 py-3">Partner</th>
-                          <th scope="col" className="px-6 py-3">Lead Program</th>
-                          <th scope="col" className="px-6 py-3">Lead Region</th>
-                          <th scope="col" className="px-6 py-3">Content Writer</th>
-                          <th scope="col" className="px-6 py-3">Industri</th>
-                          <th scope="col" className="px-6 py-3">Student</th>
-                          <th scope="col" className="px-6 py-3">Support Mobile</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 dark:text-white">
-                          <td scope="row" className="px-6 py-3">{frontmatter.super_admin}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.admin}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.mentor}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.teacher}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.partner}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.lead_program}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.lead_region}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.content_writer}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.industri}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.student}</td>
-                          <td scope="row" className="px-6 py-3">{frontmatter.support_mobile}</td>
-                        </tr>
-                      </tbody>
-                    </table>
                   </div>
                 </div>
               </li>
