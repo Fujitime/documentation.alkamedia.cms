@@ -2,7 +2,6 @@ import * as React from "react"
 import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { forInRight } from "lodash"
 
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -69,7 +68,7 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
     }
   }
   return (
-    <main style={pageStyles} className="bg-gray-100 dark:bg-gray-900 min-h-screen w-full">
+    <main style={pageStyles} className="bg-gray-100 dark:bg-gray-900 min-h-screen w-full pt-6">
       <nav className="fixed top-0 z-40 w-full bg-white dark:bg-gray-800 p-4 h-16 flex justify-end">
         <button type="button" onClick={() => setSidebar(!showSidebar)} className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span className="sr-only">Open sidebar</span>
@@ -158,17 +157,17 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
         </div>
       </aside>
       <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-8">
-        <div className="mt-8 text-gray-700 dark:text-gray-300">
-          <h1 className="font-semibold text-3xl capitalize">{pageContext.pageName}</h1>
-          <ul className="max-w-md space-y-1 text-gray-500 list-none dark:text-gray-400">
+        <div className="mt-8 text-gray-700 dark:text-gray-300 mb-5">
+          <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl capitalize mb-2">{pageContext.pageName}</h1>
+          <ul className="w-full text-gray-500 dark:text-gray-400 ml-2">
           {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
             return (
-              <li key={edge.node.id} className="">
-              <Link to={"#" + edge.node.frontmatter.fungsional} ><span className="text-red-500" >#</span>{edge.node.frontmatter.fungsional} </Link>
+              <li key={edge.node.id}>
+              <Link to={"#" + edge.node.frontmatter.fungsional} className="hover:text-gray-700 hover:dark:text-gray-300"><span className="text-red-500">#</span>{edge.node.frontmatter.fungsional} </Link>
               </li>
             )
           })}
-        </ul>
+          </ul>
         </div>
         <ul>
           {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
@@ -177,7 +176,7 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
             return (
               <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4">
                 <div>
-                  <h1 className="dark:text-slate-200 font-semibold mb-2">{frontmatter.fungsional}</h1>
+                  <h1 className="dark:text-slate-200 font-semibold mb-2 text-2xl sm:text-3xl">{frontmatter.fungsional}</h1>
                   <div className="mb-4 flex flex-wrap gap-2 z-0" >
                     <GatsbyImage image={image} alt={frontmatter.fungsional} />
                     <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
