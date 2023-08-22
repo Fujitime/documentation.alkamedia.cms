@@ -24,6 +24,12 @@ const config: GatsbyConfig = {
         path: `${__dirname}/fungsional`
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `static/icons/icon.png` // Sesuaikan dengan jalur ikon Anda
+      }
+    }
   ]
 };
 
