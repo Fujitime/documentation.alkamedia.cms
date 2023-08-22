@@ -1,7 +1,7 @@
 define: &_fields
    - { name: "fungsional", label: "Fungsional" }
    - { name: "gambar", label: "Gambar", widget: "image" }
-   - { name: "deskripsi", label: "Deskripsi", widget: "markdown"}
+   - { name: "body", label: "Deskripsi", widget: "markdown"}
    - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow","Pending","None"] } 
    - { name: "admin", label: "Admin", widget: "select", options: ["Allow","Pending","None"] } 
    - { name: "mentor", label: "Mentor", widget: "select", options: ["Allow","Pending","None"] } 
@@ -21,7 +21,7 @@ backend:
 
 media_folder: fungsional/uploads
 public_folder: ./uploads
-# local_backend: true
+local_backend: true
 
 collections:
   - name: "authentication"
