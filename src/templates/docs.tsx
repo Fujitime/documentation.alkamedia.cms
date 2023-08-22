@@ -2,7 +2,7 @@ import * as React from "react"
 import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
-import Sidebar from "../components/Sidebar"
+import Sidebar from "../components/sidebar"
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
@@ -67,21 +67,19 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
   }
   return (
     <main style={pageStyles} className="bg-gray-100 dark:bg-gray-900 min-h-screen w-full">
-      <Sidebar data={data} pageContext={{
-        pageName: ""
-      }} />
+      <Sidebar data={data} state={[role, setRole]} />
       <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-8">
         <div className="mt-8 text-gray-700 dark:text-gray-300">
           <h1 className="font-semibold text-3xl capitalize">{pageContext.pageName}</h1>
-          <ul className="max-w-md space-y-1 text-gray-500 list-none dark:text-gray-400">
-          {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
-            return (
-              <li key={edge.node.id} className="">
-              <Link to={"#" + edge.node.frontmatter.fungsional} ><span className="text-red-500" >#</span>{edge.node.frontmatter.fungsional} </Link>
-              </li>
-            )
-          })}
-        </ul>
+            <ul className="max-w-md space-y-1 text-gray-500 list-none dark:text-gray-400">
+            {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
+              return (
+                <li key={edge.node.id} className="">
+                <Link to={"#" + edge.node.frontmatter.fungsional} ><span className="text-red-500" >#</span>{edge.node.frontmatter.fungsional} </Link>
+                </li>
+              )
+            })}
+          </ul>
         </div>
         <ul>
           {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
@@ -91,20 +89,20 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
               <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4">
                 <div>
                   <h1 className="dark:text-slate-200 font-semibold mb-2">{frontmatter.fungsional}</h1>
-                                                  <div className="mb-4 flex flex-wrap gap-2 z-0" >
-                                                    <GatsbyImage image={image} alt={frontmatter.fungsional} />
-                                                    <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
-                                                  </div>
-                                                  <div className="w-full overflow-x-auto">
-                                                  </div>
-                                                </div>
-                                              </li>
-                                            )
-                                          })}
-                                        </ul>
-                                      </div>
-                                    </main>
-                                  )
+                  <div className="mb-4 flex flex-wrap gap-2 z-0" >
+                    <GatsbyImage image={image} alt={frontmatter.fungsional} />
+                    <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
+                  </div>
+                  <div className="w-full overflow-x-auto">
+                  </div>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </main>
+  )
 }
 
 

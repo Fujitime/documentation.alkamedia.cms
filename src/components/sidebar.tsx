@@ -48,8 +48,8 @@ interface NestedDir {
   parents: string[];
 }
 
-const Sidebar: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({data, pageContext}) => {
-  const [role, setRole] = React.useState<string | keyof FrontMatter>("all");
+const Sidebar: React.FC<{ data: Data, state: [string, React.Dispatch<React.SetStateAction<string>>] }> = ({data, state}) => {
+  const [role, setRole] = state;
   const [showSidebar, setSidebar] = React.useState<boolean>(false)
   const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
   let dirs: (NestedDir|string)[] = data.dirs.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
