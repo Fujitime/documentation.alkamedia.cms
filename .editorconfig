@@ -1,0 +1,16 @@
+# Berlaku untuk semua file
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Berlaku untuk berkas JavaScript dan TypeScript
+[*.js,*.jsx,*.ts,*.tsx]
+indent_size = 2
+
+# Berlaku untuk berkas Markdown
+[*.md]
+trim_trailing_whitespace = false

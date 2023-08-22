@@ -79,7 +79,7 @@ const Sidebar: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({da
             <ul className="space-y-2 font-medium">
               <li className="mb-4">
                   <Link to="/" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <StaticImage src="../../public/img/alkademi.jpeg" alt="Logo" layout="fixed" width={36} height={36}/>
+                    <StaticImage src="../image/alkademi.jpeg" alt="Logo" layout="fixed" width={36} height={36}/>
                     <span className="ml-3">Dokumentasi</span>
                   </Link>
               </li>

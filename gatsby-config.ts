@@ -17,7 +17,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
-    "gatsby-plugin-favicons",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,23 +25,11 @@ const config: GatsbyConfig = {
       }
     },
     {
-      resolve: 'gatsby-plugin-favicons',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        logo: './src/logo.svg',
-        appName: 'My Website',
-        background: '#fff',
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          yandex: false,
-          windows: false
-        }
+        icon: `static/icons/icon.png` // Sesuaikan dengan jalur ikon Anda
       }
     }
-    
   ]
 };
 

@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
-import { StaticImage, GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Sidebar from "../components/Sidebar"
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -55,8 +55,6 @@ interface NestedDir {
 
 const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({data, pageContext}) => {
   const [role, setRole] = React.useState<string | keyof FrontMatter>("all");
-  const [showSidebar, setSidebar] = React.useState<boolean>(false)
-  const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
   let dirs: (NestedDir|string)[] = data.dirs.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
   for(let edge of data.dirs.edges.filter(edge => edge.node.name != "uploads" && edge.node.relativeDirectory.length > 0)){
     const i = dirs.findIndex(dir => typeof(dir) == 'string' ? dir == edge.node.relativeDirectory : dir.dir == edge.node.relativeDirectory)
@@ -93,20 +91,20 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
               <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4">
                 <div>
                   <h1 className="dark:text-slate-200 font-semibold mb-2">{frontmatter.fungsional}</h1>
-                  <div className="mb-4 flex flex-wrap gap-2 z-0" >
-                    <GatsbyImage image={image} alt={frontmatter.fungsional} />
-                    <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
-                  </div>
-                  <div className="w-full overflow-x-auto">
-                  </div>
-                </div>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    </main>
-  )
+                                                  <div className="mb-4 flex flex-wrap gap-2 z-0" >
+                                                    <GatsbyImage image={image} alt={frontmatter.fungsional} />
+                                                    <article className="dark:text-slate-300 font-light prose lg:prose-xl">{frontmatter.deskripsi}</article>
+                                                  </div>
+                                                  <div className="w-full overflow-x-auto">
+                                                  </div>
+                                                </div>
+                                              </li>
+                                            )
+                                          })}
+                                        </ul>
+                                      </div>
+                                    </main>
+                                  )
 }
 
 
