@@ -21,7 +21,7 @@ backend:
 
 media_folder: fungsional/uploads
 public_folder: ./uploads
-local_backend: true
+# local_backend: true
 
 collections:
   - name: "authentication"
