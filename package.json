@@ -24,6 +24,7 @@
     "gatsby-plugin-postcss": "^6.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-remark-images": "^7.11.0",
+    "gatsby-remark-images-modal": "^0.0.4",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
