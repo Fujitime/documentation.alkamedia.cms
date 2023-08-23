@@ -4,6 +4,7 @@ import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Sidebar from "../components/sidebar"
+import "animate.css"
 
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
@@ -45,11 +46,6 @@ interface Data {
   };
 }
 
-interface NestedDir {
-  dir: string;
-  parents: string[];
-}
-
 const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({data, pageContext}) => {
   const [role, setRole] = React.useState<string | keyof FrontMatter>("all");
   const [imageModal, setImageModal] = React.useState<IGatsbyImageData | null>();
@@ -73,32 +69,18 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
     };
   }, []);
 
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
-    if (showBackToTop) {
-      timeoutId = setTimeout(() => {
-        setShowBackToTop(false);
-      }, 3000);
-    }
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, [showBackToTop]);
   const filtered = data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow")
   return (
     <main style={pageStyles} className="bg-gray-100 dark:bg-gray-900 min-h-screen w-full">
        <button
-        className={`${
-          showBackToTop ? "animate-fadeInUp" : "animate-fadeOutDown"
+        className={`animate__animated ${
+          showBackToTop ? "animate__fadeInUp" : "animate__fadeOutDown"
         } fixed bottom-6 right-6 z-10 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md shadow-md`}
         onClick={scrollToTop}
       >
-       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
       </button>
       {imageModal == null ? <></> : (
         <div className="pt-16 fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full bg-gray-500/[0.8] dark:bg-gray-700/[0.8]">
