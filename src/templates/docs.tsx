@@ -3,6 +3,7 @@ import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Sidebar from "../components/sidebar"
+
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
@@ -29,14 +30,8 @@ interface FrontMatter {
 
 
 interface Data {
-  dirs: {
-    edges: Array<{
-      node: {
-        name: string;
-        relativePath: string;
-        relativeDirectory: string;
-      }
-    }>
+  all: {
+    distinct: Array<string>
   };
   docs: {
     edges: Array<{
@@ -57,16 +52,6 @@ interface NestedDir {
 const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({data, pageContext}) => {
   const [role, setRole] = React.useState<string | keyof FrontMatter>("all");
   const [imageModal, setImageModal] = React.useState<IGatsbyImageData | null>();
-  let dirs: (NestedDir|string)[] = data.dirs.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
-  for(let edge of data.dirs.edges.filter(edge => edge.node.name != "uploads" && edge.node.relativeDirectory.length > 0)){
-    const i = dirs.findIndex(dir => typeof(dir) == 'string' ? dir == edge.node.relativeDirectory : dir.dir == edge.node.relativeDirectory)
-    if(i >= 0){
-      dirs[i] = {
-        dir: edge.node.relativeDirectory,
-        parents: [...(typeof(dirs[i]) == 'string' ? [edge.node.relativeDirectory] : (dirs[i] as NestedDir).parents), edge.node.name]
-      }
-    }
-  }
   const filtered = data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow")
   return (
     <main style={pageStyles} className="bg-gray-100 dark:bg-gray-900 min-h-screen w-full">
@@ -83,7 +68,7 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
           </div>
         </div>
       )}
-      <Sidebar data={data.dirs} state={[role, setRole]} />
+      <Sidebar data={data.all} state={[role, setRole]} />
       <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-8">
         <div className="mt-8 mb-3 text-gray-700 dark:text-gray-300">
           <h1 className="font-semibold text-3xl capitalize mb-1">{pageContext.pageName}</h1>
@@ -123,16 +108,10 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
 export default IndexPage
 
 export const query = graphql`query($category: String) {
-  dirs: allDirectory(filter: {absolutePath: {regex: "/(fungsional\/)/"}}) {
-    edges {
-      node {
-        name
-        relativePath
-        relativeDirectory
-      }
-    }
+  all: allMarkdownRemark {
+    distinct(field: {frontmatter: {menu: SELECT}})
   }
-  docs: allMarkdownRemark (filter: {fileAbsolutePath: {regex: $category}}) {
+  docs: allMarkdownRemark (filter: {frontmatter: {menu: {eq: $category}}}) {
     edges {
       node {
         html

@@ -1,19 +1,3 @@
-define: &_fields
-   - { name: "fungsional", label: "Fungsional" }
-   - { name: "gambar", label: "Gambar", widget: "image" }
-   - { name: "body", label: "Deskripsi", widget: "markdown"}
-   - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "admin", label: "Admin", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "mentor", label: "Mentor", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "teacher", label: "Teacher", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "partner", label: "Partner", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "lead_program", label: "Lead Program", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "lead_region", label: "Lead Region", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "content_writer", label: "Content Writer", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "industri", label: "Industri", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "student", label: "Student", widget: "select", options: ["Allow","Pending","None"] } 
-   - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["Yes","Pending","No"] }
-
 backend:
   name: github
   repo: Alkademi-Development/documentation.alkamedia.cms
@@ -24,263 +8,35 @@ public_folder: ./uploads
 # local_backend: true
 
 collections:
-  - name: "authentication"
-    label: "Authentication" 
-    editor: 
+  - name: "fungsional"
+    label: "Fungsional"
+    editor:
       preview: false
-    folder: fungsional/authentication
-    media_folder: uploads
-    create: true  
-    fields: *_fields
-
-  - name: "dashboard"
-    label: "Dashboard"
-    editor: 
-      preview: false
-    folder: "fungsional/dashboard"
-    media_folder: uploads
+    folder: "fungsional"
     create: true
-    fields: *_fields
-
-  - name: "schedule"
-    label: "Schedule"
-    editor: 
-      preview: false
-    folder: "fungsional/schedule"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "schedule_attendance"
-    label: "Schedule(Attendance)"
-    editor: 
-      preview: false
-    folder: "fungsional/schedule/attendance"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "user"
-    label: "User"
-    editor: 
-      preview: false
-    folder: "fungsional/user"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "chat"
-    label: "Chat"
-    editor: 
-      preview: false
-    folder: "fungsional/chat"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "program"
-    label: "Program"
-    editor: 
-      preview: false
-    folder: "fungsional/program"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "materi"
-    label: "Materi"
-    editor: 
-      preview: false
-    folder: "fungsional/materi"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "classroom"
-    label: "Classroom"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "classroom_attendance"
-    label: "Classroom(Attendance)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/attendace"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "classroom_overview"
-    label: "Classroom(Overview)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/overview"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "classroom_materi"
-    label: "Classroom(Materi)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/materi"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "classroom_tugas"
-    label: "Classroom(Tugas)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/tugas"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-  
-  - name: "classroom_hasil_belajar"
-    label: "Classroom(Student/Hasil Belajar)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/hasil_belajar"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "classroom_peserta"
-    label: "Classroom(Peserta)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/peserta"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-  
-  - name: "classroom_kegiatan"
-    label: "Classroom(Kegiatan)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/kegiatan"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "classroom_statistik"
-    label: "Classroom(Statistik)"
-    editor: 
-      preview: false
-    folder: "fungsional/classroom/statistik"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "review_tugas"
-    label: "Review Tugas"
-    editor: 
-      preview: false
-    folder: "fungsional/review_tugas"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "rekap_nilai"
-    label: "Rekap Nilai"
-    editor: 
-      preview: false
-    folder: "fungsional/rekap_nilai"
-    media_folder: uploads
-    create: true
-    fields: *_fields    
-  
-  - name: "form_formulir"
-    label: "Form(Formulir)"
-    editor: 
-      preview: false
-    folder: "fungsional/form/formulir"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-  
-  - name: "form_bank_soal"
-    label: "Form(Bank Soal)"
-    editor: 
-      preview: false
-    folder: "fungsional/form/bank_soal"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "studio"
-    label: "Studio"
-    editor: 
-      preview: false
-    folder: "fungsional/studio"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "event_program"
-    label: "Event(Program)"
-    editor: 
-      preview: false
-    folder: "fungsional/event/program"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "event_career"
-    label: "Event(Career)"
-    editor: 
-      preview: false
-    folder: "fungsional/event/career"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "blog"
-    label: "Blog"
-    editor: 
-      preview: false
-    folder: "fungsional/blog"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "galeri"
-    label: "Galeri"
-    editor: 
-      preview: false
-    folder: "fungsional/galeri"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "settings"
-    label: "Settings"
-    editor: 
-      preview: false
-    folder: "fungsional/settings"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-  
-  - name: "announcement"
-    label: "Announcement"
-    editor: 
-      preview: false
-    folder: "fungsional/announcement"
-    media_folder: uploads
-    create: true
-    fields: *_fields
-
-  - name: "bantuan"
-    label: "Bantuan"
-    editor: 
-      preview: false
-    folder: "fungsional/bantuan"
-    media_folder: uploads
-    create: true
-    fields: *_fields
+    fields:
+      - { name: "menu", label: "Menu", widget: "select", options:
+          [
+            "Authentication", "Dashboard", "Schedule", "Schedule(Attendance)",
+            "User", "Chat", "Program", "Materi", "Classroom", "Classroom(Attendance)",
+            "Classroom(Overview)", "Classroom(Materi)", "Classroom(Tugas)",
+            "Classroom(Student/Hasil Belajar)", "Classroom(Peserta)", "Classroom(Kegiatan)",
+            "Classroom(Statistik)", "Review Tugas", "Rekap Nilai", "Form(Formulir)",
+            "Form(Bank Soal)", "Studio", "Event(Program)", "Event(Career)", "Blog",
+            "Galeri", "Settings", "Announcement", "Bantuan"
+          ]
+      }
+      - { name: "fungsional", label: "Fungsional"}
+      - { name: "gambar", label: "Gambar", widget: "image" }
+      - { name: "body", label: "Deskripsi", widget: "markdown" }
+      - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "admin", label: "Admin", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "mentor", label: "Mentor", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "teacher", label: "Teacher", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "partner", label: "Partner", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "lead_program", label: "Lead Program", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "lead_region", label: "Lead Region", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "content_writer", label: "Content Writer", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "industri", label: "Industri", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "student", label: "Student", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["Yes", "Pending", "No"] }

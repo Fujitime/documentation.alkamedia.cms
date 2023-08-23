@@ -1,15 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
-interface Dirs {
-  edges: Array<{
-    node: {
-      name: string;
-      relativePath: string;
-      relativeDirectory: string;
-    }
-  }>
+interface All {
+  distinct: Array<string>
 }
 
 interface NestedDir {
@@ -17,17 +11,17 @@ interface NestedDir {
   parents: string[];
 }
 
-const Sidebar: React.FC<{ data: Dirs, state: [string, React.Dispatch<React.SetStateAction<string>>] }> = ({data, state}) => {
+const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetStateAction<string>>] }> = ({data, state}) => {
   const [role, setRole] = state;
   const [showSidebar, setSidebar] = React.useState<boolean>(false)
   const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
-  let dirs: (NestedDir|string)[] = data.edges.filter(edge => edge.node.relativeDirectory.length == 0).map(edge => edge.node.name)
-  for(let edge of data.edges.filter(edge => edge.node.name != "uploads" && edge.node.relativeDirectory.length > 0)){
-    const i = dirs.findIndex(dir => typeof(dir) == 'string' ? dir == edge.node.relativeDirectory : dir.dir == edge.node.relativeDirectory)
+  let dirs: (NestedDir|string)[] = data.distinct.filter(menu => !menu.includes("("))
+  for(let menu of data.distinct.filter(menu => menu.includes("("))){
+    const i = dirs.findIndex(dir => typeof(dir) == 'string' ? menu.includes(dir) : menu.includes(dir.dir))
     if(i >= 0){
       dirs[i] = {
-        dir: edge.node.relativeDirectory,
-        parents: [...(typeof(dirs[i]) == 'string' ? [edge.node.relativeDirectory] : (dirs[i] as NestedDir).parents), edge.node.name]
+        dir: menu.split("(")[0],
+        parents: [...(typeof(dirs[i]) == 'string' ? [menu.split("(")[0]] : (dirs[i] as NestedDir).parents), menu]
       }
     }
   }
@@ -93,7 +87,7 @@ const Sidebar: React.FC<{ data: Dirs, state: [string, React.Dispatch<React.SetSt
                 return (
                   <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300">
                     { typeof dir == 'string' ? (
-                      <Link to={"/" + dir} className="p-3">{dir}</Link>
+                      <Link to={"/" + dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")} className="p-3">{dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
                     ) : (
                       <>
                         <button
@@ -109,7 +103,7 @@ const Sidebar: React.FC<{ data: Dirs, state: [string, React.Dispatch<React.SetSt
                         <ul id={dropdownId} className={(showDropdown === dropdownId ? "" : "hidden") + " py-2 space-y-2 ml-4"}>
                           {dir.parents.map((_dir, index) => (
                             <li key={dir.dir + index}>
-                              <Link to={"/" + _dir}>{_dir}</Link>
+                              <Link to={"/" + _dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")}>{_dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
                             </li>
                           ))}
                         </ul>
