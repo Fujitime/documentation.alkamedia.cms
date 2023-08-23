@@ -34,7 +34,7 @@ const Sidebar: React.FC<{ data: Dirs, state: [string, React.Dispatch<React.SetSt
   
   return (
     <>
-    <nav className="fixed backdrop-blur transition-colorsdark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-50 w-full p-4 h-16 flex justify-between">
+    <nav className="fixed backdrop-blur transition-colorsdark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
       <div>
         <Link to="/" className="flex items-center text-gray-900 dark:text-white group">
           <StaticImage src="../image/alkademi.jpeg" alt="Logo" layout="fixed" width={36} height={36}/>
@@ -49,7 +49,7 @@ const Sidebar: React.FC<{ data: Dirs, state: [string, React.Dispatch<React.SetSt
         </button>
       </nav>
 
-      <aside className={(showSidebar ? "" : "-translate-x-full") + " fixed top-0 left-0 w-[14.2rem] z-40 sm:w-64 h-screen transition-transform sm:translate-x-0"} aria-label="Sidebar">
+      <aside className={(showSidebar ? "" : "-translate-x-full") + " fixed top-0 left-0 w-[14.2rem] z-20 sm:w-64 h-screen transition-transform sm:translate-x-0"} aria-label="Sidebar">
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul className="space-y-2 font-medium pt-14">
               <li className="mb-4">
