@@ -27,7 +27,13 @@ collections:
           ]
       }
       - { name: "fungsional", label: "Fungsional"}
-      - { name: "gambar", label: "Gambar", widget: "image" }
+      - {
+          label: "gambar",
+          name: "gambar",
+          widget: "list",
+          field:
+          { label: "Gambar", name: "image", widget: "image" },
+        }
       - { name: "body", label: "Deskripsi", widget: "markdown" }
       - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow", "Pending", "None"] }
       - { name: "admin", label: "Admin", widget: "select", options: ["Allow", "Pending", "None"] }
