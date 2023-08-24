@@ -14,7 +14,7 @@ lead_region: Allow
 content_writer: Allow
 industri: Pending
 student: Allow
-support_mobile: Yes
+support_mobile: No
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis enim vel quam commodo dictum. Nunc vel massa sapien. Morbi id mauris blandit, posuere libero in, eleifend elit. Donec condimentum sodales facilisis. Quisque sed velit et nulla facilisis luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed gravida eget tellus eu viverra.
 
