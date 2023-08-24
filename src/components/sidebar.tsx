@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import ThemeToggle from '../components/theme_toggle'
 
 interface All {
@@ -32,7 +33,8 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
     <nav className="fixed backdrop-blur transition-colorsdark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
       <div>
         <Link to="/" className="flex items-center text-gray-900 dark:text-white group">
-          <StaticImage src="../images/alkamedia-logo-dark.png" alt="Logo" layout="fixed" height={36}/>
+        <StaticImage src="../images/alkamedia-logo-light.png" alt="Logo" layout="fixed" height={36} className="dark:hidden"/>
+        <StaticImage src="../images/alkamedia-logo-dark.png" alt="Logo" layout="fixed" height={36} className="hidden dark:block"/>
         </Link>
       </div>
       <ThemeToggle />
