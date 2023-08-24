@@ -30,7 +30,43 @@ const config: GatsbyConfig = {
       options: {
         icon: `static/icons/alkamedia.png`
       }
-    }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {
+                ts: "typescript",
+                js: "javascript",
+                sh: "bash"
+              },
+              showLineNumbers: true,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              escapeEntities: {},
+            },
+          },
+        ],
+      },
+    },
   ]
 };
 
