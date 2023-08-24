@@ -31,8 +31,7 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
     <nav className="fixed backdrop-blur transition-colorsdark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
       <div>
         <Link to="/" className="flex items-center text-gray-900 dark:text-white group">
-          <StaticImage src="../image/alkademi.jpeg" alt="Logo" layout="fixed" width={36} height={36}/>
-          <span className="ml-3">Dokumentasi</span>
+          <StaticImage src="../images/alkamedia-logo-dark.png" alt="Logo" layout="fixed" height={36}/>
         </Link>
       </div>
         <button type="button" onClick={() => setSidebar(!showSidebar)} className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">

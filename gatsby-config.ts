@@ -27,7 +27,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `static/icons/icon.png`
+        icon: `static/icons/alkamedia.png`
       }
     }
   ]
