@@ -2,7 +2,6 @@ import * as React from "react";
 import { useEffect } from "react";
 import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import Sidebar from "../components/sidebar"
 import "animate.css"
