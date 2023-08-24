@@ -15,7 +15,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
           <p className="text-3xl font-semibold">Page not found</p>
           <p className="text-lg text-gray-600 dark:text-gray-400">we couldn't find what you were looking for.</p>
           <a rel="noopener noreferrer" href="/" className="px-6 py-3 mt-4 text-lg font-semibold rounded bg-violet-400 text-gray-900 dark:bg-violet-500 dark:text-gray-100 hover:bg-violet-500">
-            Back to
+            Back to Documentation
           </a>
         </div>
     </div>
