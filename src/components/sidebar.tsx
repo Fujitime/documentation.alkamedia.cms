@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import ThemeToggle from '../components/theme_toggle'
 
 interface All {
   distinct: Array<string>
@@ -25,7 +26,7 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
       }
     }
   }
-  
+
   return (
     <>
     <nav className="fixed backdrop-blur transition-colorsdark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
@@ -34,6 +35,7 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
           <StaticImage src="../images/alkamedia-logo-dark.png" alt="Logo" layout="fixed" height={36}/>
         </Link>
       </div>
+      <ThemeToggle />
         <button type="button" onClick={() => setSidebar(!showSidebar)} className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span className="sr-only">Open sidebar</span>
           <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +51,7 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
               <button
                 type="button"
                 className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                onClick={() => setShowDropdown(showDropdown === "role_filter" ? null : "role_filter")} 
+                onClick={() => setShowDropdown(showDropdown === "role_filter" ? null : "role_filter")}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#94a3b8" height="1em" viewBox="0 0 512 512">
                   <path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/>
@@ -92,7 +94,7 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
                         <button
                           type="button"
                           className="flex items-center w-full p-3 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                          onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)} 
+                          onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)}
                         >
                           <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
                           <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -114,7 +116,7 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
             </ul>
         </div>
       </aside>
-    </>    
+    </>
 
   );
 }
