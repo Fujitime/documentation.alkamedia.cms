@@ -103,7 +103,7 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
                 <div>
                   <h1 className="dark:text-slate-200 font-semibold mb-3 text-2xl sm:text-3xl">{frontmatter.fungsional}</h1>
                   <article className="w-full dark:text-slate-300 font-light prose lg:prose-xl dark:prose-invert mb-1" dangerouslySetInnerHTML={{ __html: edge.node.html}}></article>
-                  <Gallery images={images} />
+                  <Gallery images={images} colWidth={90}/>
                 </div>
               </li>
             )
@@ -130,7 +130,8 @@ export const query = graphql`query($category: String) {
           gambar {
             childImageSharp {
             thumb: gatsbyImageData(
-              height: 300
+              height: 386
+              width: 717
               placeholder: BLURRED
             )
             full: gatsbyImageData(layout: FULL_WIDTH)
