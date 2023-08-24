@@ -80,14 +80,14 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
         </svg>
       </button>
       <Sidebar data={data.all} state={[role, setRole]} />
-      <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-8">
+      <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-2">
         <div className="mt-8 mb-3 text-gray-700 dark:text-gray-300">
           <h1 className="font-semibold text-4xl capitalize mb-1 ">{pageContext.pageName}</h1>
             <ul className="max-w-md gap-1 text-gray-500 list-none dark:text-gray-400">
             {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
               return (
                 <li key={edge.node.id}>
-                  <Link to={"#" + edge.node.frontmatter.fungsional} className="hover:text-gray-700 text-xl hover:dark:text-gray-300"><span className="text-indigo-400 " >#</span>{edge.node.frontmatter.fungsional} </Link>
+                  <Link to={"#" + edge.node.frontmatter.fungsional} className="hover:text-gray-700 text-xl hover:dark:text-gray-300"><span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{edge.node.frontmatter.fungsional} </Link>
                 </li>
               )
             })}
@@ -98,11 +98,14 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
             const frontmatter = edge.node.frontmatter
             const images = frontmatter.gambar.map(v => v.childImageSharp);
             return (
-              <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4">
+              <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4 pt-16">
                 <div>
-                  <h1 className="dark:text-slate-200 font-semibold mb-3 text-2xl sm:text-3xl">{frontmatter.fungsional}</h1>
-                  <article className="w-full dark:text-slate-300 font-light prose lg:prose-xl dark:prose-invert mb-1" dangerouslySetInnerHTML={{ __html: edge.node.html}}></article>
-                  <Gallery images={images} colWidth={90}/>
+                  <h1 className="dark:text-slate-200 font-semibold mb-1 text-2xl sm:text-3xl"><span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{frontmatter.fungsional}</h1>
+                  <span className={`text-slate-200 text-sm rounded-lg px-1.5 py-[0.075] ${frontmatter.support_mobile == "Yes" ? "bg-blue-500" : "bg-red-500"}`}>{frontmatter.support_mobile == "Yes" ? "Support Mobile" : "Not Support Mobile"}</span>
+                  <article className="w-full dark:text-slate-300 font-light prose lg:prose-xl dark:prose-invert mt-3 mb-1" dangerouslySetInnerHTML={{ __html: edge.node.html}}></article>
+                  <div className="mx-3">
+                    <Gallery images={images} colWidth={90}/>
+                  </div>
                 </div>
               </li>
             )

@@ -7,6 +7,13 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '98%'
+          }
+        }
+      },
       colors: {
         primary: 'var(--primary)',
         'text-main': 'var(--text-main)',
