@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import ThemeToggle from '../components/theme_toggle'
 
 interface All {

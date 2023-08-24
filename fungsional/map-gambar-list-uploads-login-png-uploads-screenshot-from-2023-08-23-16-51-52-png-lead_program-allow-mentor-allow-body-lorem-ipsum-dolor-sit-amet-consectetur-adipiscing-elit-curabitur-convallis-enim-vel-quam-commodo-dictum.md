@@ -1,6 +1,6 @@
 ---
 menu: Authentication
-fungsional: Login
+fungsional: Login 2
 gambar:
   - uploads/login.png
   - uploads/screenshot-from-2023-08-23-16-51-52.png
