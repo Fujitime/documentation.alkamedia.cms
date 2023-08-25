@@ -3,16 +3,46 @@ backend:
   repo: Alkademi-Development/documentation.alkamedia.cms
   branch: master
 
-media_folder: static/assets
-public_folder: /assets
+media_folder: fungsional/uploads
+public_folder: ./uploads
+# local_backend: true
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: "fungsional"
+    label: "Fungsional"
+    editor:
+      preview: false
+    folder: "fungsional"
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: "menu", label: "Menu", widget: "select", options:
+          [
+            "Authentication", "Dashboard", "Schedule", "Schedule(Attendance)",
+            "User", "Chat", "Program", "Materi", "Classroom", "Classroom(Attendance)",
+            "Classroom(Overview)", "Classroom(Materi)", "Classroom(Tugas)",
+            "Classroom(Student/Hasil Belajar)", "Classroom(Peserta)", "Classroom(Kegiatan)",
+            "Classroom(Statistik)", "Review Tugas", "Rekap Nilai", "Form(Formulir)",
+            "Form(Bank Soal)", "Studio", "Event(Program)", "Event(Career)", "Blog",
+            "Galeri", "Settings", "Announcement", "Bantuan"
+          ]
+      }
+      - { name: "fungsional", label: "Fungsional"}
+      - {
+          label: "gambar",
+          name: "gambar",
+          widget: "list",
+          field:
+          { label: "Gambar", name: "image", widget: "image" },
+        }
+      - { name: "body", label: "Deskripsi", widget: "markdown" }
+      - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "admin", label: "Admin", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "mentor", label: "Mentor", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "teacher", label: "Teacher", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "partner", label: "Partner", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "lead_program", label: "Lead Program", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "lead_region", label: "Lead Region", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "content_writer", label: "Content Writer", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "industri", label: "Industri", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "student", label: "Student", widget: "select", options: ["Allow", "Pending", "None"] }
+      - { name: "support_mobile", label: "Support Mobile", widget: "select", options: ["Yes", "Pending", "No"] }

@@ -13,6 +13,60 @@ const config: GatsbyConfig = {
     "gatsby-plugin-netlify",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-postcss",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
+    `gatsby-plugin-dark-mode`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'md',
+        path: `${__dirname}/fungsional`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `static/icons/alkamedia.png`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {
+                ts: "typescript",
+                js: "javascript",
+                sh: "bash"
+              },
+              showLineNumbers: true,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              escapeEntities: {},
+            },
+          },
+        ],
+      },
+    },
   ]
 };
 
