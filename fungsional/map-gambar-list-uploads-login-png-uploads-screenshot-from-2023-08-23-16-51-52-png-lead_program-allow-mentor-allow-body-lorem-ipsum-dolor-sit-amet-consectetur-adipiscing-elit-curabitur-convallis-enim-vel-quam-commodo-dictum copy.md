@@ -1,9 +1,7 @@
 ---
 menu: Authentication
 fungsional: Login
-gambar:
-  - uploads/login.png
-  - uploads/screenshot-from-2023-08-23-16-51-52.png
+gambar: []
 super_admin: Allow
 admin: Allow
 mentor: Allow
