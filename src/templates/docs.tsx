@@ -96,7 +96,7 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
         <ul>
           { filtered.length > 0 ? filtered.map(edge => {
             const frontmatter = edge.node.frontmatter
-            const images = frontmatter.gambar.map(v => v.childImageSharp);
+            const images = frontmatter.gambar?.map(v => v.childImageSharp) || [];
             return (
               <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4 pt-16">
                 <div>
