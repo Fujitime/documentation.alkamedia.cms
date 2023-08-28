@@ -33,6 +33,7 @@ collections:
           widget: "list",
           field:
           { label: "Gambar", name: "image", widget: "image" },
+          default: [],
         }
       - { name: "body", label: "Deskripsi", widget: "markdown" }
       - { name: "super_admin", label: "Super Admin", widget: "select", options: ["Allow", "Pending", "None"] }
