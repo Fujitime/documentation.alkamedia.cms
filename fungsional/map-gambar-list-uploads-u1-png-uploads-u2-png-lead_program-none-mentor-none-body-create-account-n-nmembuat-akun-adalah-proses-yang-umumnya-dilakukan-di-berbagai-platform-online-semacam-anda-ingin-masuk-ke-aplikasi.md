@@ -16,13 +16,14 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-##### **Create account**
+## Membuat Akun di Alkademi
 
-Membuat akun adalah proses yang umumnya dilakukan di berbagai platform online,semacam anda ingin masuk ke aplikasi online biasa nya ada akan di arahkan untuk memasukan akun terlebih dahulu.
+Membuat akun di platform Alkademi cukup mudah. Ikuti langkah-langkah di bawah ini untuk memulai:
 
-* **C﻿ara buat akun alkademi**\
-  k﻿lik menu user\
-  k﻿lik tombol +user\
-  p﻿ilih akun yang ingin di buat\
-  m﻿asukan data data\
-  l﻿alu enter
+1. **Akses Menu Pengguna**: Setelah membuka platform Alkademi, cari dan klik opsi "Menu Pengguna" atau "User Menu" di bagian atas halaman. Biasanya, ini akan menjadi ikon profil atau tautan yang menunjukkan menu terkait pengguna.
+2. **Tambah Pengguna Baru**: Di dalam menu pengguna, cari tombol dengan simbol tambah (+) atau teks "Tambah Pengguna" / "Add User". Klik tombol ini untuk memulai proses pembuatan akun baru.
+3. **Pilih Jenis Akun**: Anda akan diarahkan ke halaman di mana Anda dapat memilih jenis akun yang ingin Anda buat. Pilihlah jenis akun yang sesuai dengan peran atau tujuan Anda di platform ini.
+4. **Masukkan Data**: Isi formulir yang muncul dengan informasi yang diperlukan. Biasanya, informasi ini termasuk nama lengkap, alamat email, kata sandi, dan informasi tambahan seperti tanggal lahir atau alamat.
+5. **Verifikasi Data**: Pastikan untuk memeriksa kembali data yang Anda masukkan. Pastikan tidak ada kesalahan ketik atau informasi yang kurang tepat.
+6. **Klik "Daftar" atau "Buat Akun"**: Setelah Anda yakin dengan data yang dimasukkan, cari tombol "Daftar", "Buat Akun", atau setara lainnya. Klik tombol ini untuk mengirimkan data dan membuat akun.
+7. **Selesai**: Selamat, Anda telah berhasil membuat akun di Alkademi! Anda mungkin akan diarahkan kembali ke halaman utama atau halaman profil pengguna.
