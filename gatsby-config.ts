@@ -69,7 +69,6 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
     "gatsby-plugin-dark-mode",
-    "gatsby-plugin-styled-components",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
