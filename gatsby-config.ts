@@ -10,6 +10,7 @@ const query = `
           html
           frontmatter {
             fungsional
+            menu
           }
           id
         }
@@ -25,6 +26,7 @@ interface Data {
         html: string;
         frontmatter: {
           fungsional: string;
+          menu: string;
         };
         id: string;
       };
@@ -38,6 +40,7 @@ const queries = [
     transformer: ({ data }: { data: Data}) => data.docs.edges.map(v => {
       return {
         html: v.node.html,
+        menu: v.node.frontmatter.menu,
         fungsional: v.node.frontmatter.fungsional,
         id: v.node.id} 
     }),
@@ -120,11 +123,11 @@ const config: GatsbyConfig = {
       // This plugin must be placed last in your list of plugins to ensure that it can query all the GraphQL data
       resolve: `gatsby-plugin-algolia`,
       options: {
-        appId: process.env.ALGOLIA_APP_ID,
+        appId: process.env.ALGOLIA_APPID,
         // Use Admin API key without GATSBY_ prefix, so that the key isn't exposed in the application
         // Tip: use Search API key with GATSBY_ prefix to access the service from within components
-        apiKey: process.env.ALGOLIA_API_KEY,
-        indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+        apiKey: process.env.ALGOLIA_APIKEY,
+        indexName: process.env.ALGOLIA_INDEXNAME, // for all queries
         queries,
         chunkSize: 10000, // default: 1000
         settings: {
