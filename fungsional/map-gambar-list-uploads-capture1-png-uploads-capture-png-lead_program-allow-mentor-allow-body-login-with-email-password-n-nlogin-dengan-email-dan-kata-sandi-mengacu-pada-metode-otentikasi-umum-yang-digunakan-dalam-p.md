@@ -3,7 +3,7 @@ menu: Authentication
 fungsional: Login with email & password
 gambar:
   - uploads/capture1.png
-  - uploads/capture.png
+  - uploads/login.jpg
 super_admin: Allow
 admin: Allow
 mentor: Allow
