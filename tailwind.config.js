@@ -7,6 +7,11 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        '_sm': {
+          'max': '640px'
+        },
+      },
       typography: {
         DEFAULT: {
           css: {
