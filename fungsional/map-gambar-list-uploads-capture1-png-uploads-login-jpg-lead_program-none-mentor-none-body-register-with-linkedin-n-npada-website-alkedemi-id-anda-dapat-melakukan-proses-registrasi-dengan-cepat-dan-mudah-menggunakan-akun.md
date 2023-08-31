@@ -18,7 +18,7 @@ support_mobile: Yes
 ---
 **Register with Linkedin**
 
-Pada website Alkedemi.id, Anda dapat melakukan proses registrasi dengan cepat dan mudah menggunakan akun GitHub Anda.
+Pada website Alkedemi.id, Anda dapat melakukan proses registrasi dengan cepat dan mudah menggunakan akun Linkedin anda.
 
  Langkah-langkahnya adalah sebagai berikut:
 
