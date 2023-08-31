@@ -3,7 +3,7 @@ menu: Authentication
 fungsional: Register with email & password
 gambar:
   - uploads/capture3.1.png
-  - uploads/capture.3.2png.png
+  - uploads/register.jpg
 super_admin: None
 admin: None
 mentor: None
