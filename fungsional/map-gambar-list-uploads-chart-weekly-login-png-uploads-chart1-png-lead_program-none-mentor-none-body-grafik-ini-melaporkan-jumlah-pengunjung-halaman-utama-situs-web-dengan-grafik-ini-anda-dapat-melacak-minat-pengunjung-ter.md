@@ -2,8 +2,8 @@
 menu: Dashboard
 fungsional: Chart - Landing Page Visitors
 gambar:
-  - uploads/chart-weekly-login.png
-  - uploads/chart1.png
+  - uploads/download-1-.png
+  - uploads/screenshot-from-2023-08-31-10-49-13.png
 super_admin: Allow
 admin: Allow
 mentor: None
