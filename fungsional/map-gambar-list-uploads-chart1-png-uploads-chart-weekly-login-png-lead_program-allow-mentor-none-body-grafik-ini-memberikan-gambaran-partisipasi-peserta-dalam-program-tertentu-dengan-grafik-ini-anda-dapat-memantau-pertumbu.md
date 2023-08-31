@@ -2,8 +2,8 @@
 menu: Dashboard
 fungsional: Chart - Program Participants
 gambar:
-  - uploads/chart1.png
-  - uploads/chart-weekly-login.png
+  - uploads/screenshot-from-2023-08-31-10-49-13.png
+  - uploads/download.png
 super_admin: Allow
 admin: Allow
 mentor: None
