@@ -24,7 +24,7 @@ B﻿erikut langkah-langkah untuk melakukan logout pada platform web Alkademi.id 
 
 **1. Akses Akun Anda:** Setelah halaman Alkademi.id terbuka, masuklah ke akun Anda dengan mengklik tombol "Masuk" atau "Login" dan mengisi kredensial akun Anda (alamat email dan kata sandi).
 
-**2. Temukan Menu Logout:** Setelah masuk, klik kotak menu i pagian pojok kanan atas lalu klik ikon profil.
+**2. Temukan Menu Logout:** Setelah masuk, klik kotak menu bagian pojok kanan atas lalu klik ikon profil.
 
 **3. Pilih Opsi Logout:** Setelah Anda menemukan pengaturan akun, klik pada opsi "Logout" atau "Keluar". Ini akan memulai proses logout dari akun Anda.
 
