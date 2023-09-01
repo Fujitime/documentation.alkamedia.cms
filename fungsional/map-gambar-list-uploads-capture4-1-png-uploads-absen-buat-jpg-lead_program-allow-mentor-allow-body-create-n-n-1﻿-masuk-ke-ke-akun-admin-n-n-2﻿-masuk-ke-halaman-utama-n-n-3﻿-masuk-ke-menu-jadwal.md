@@ -1,12 +1,12 @@
 ---
 menu: Schedule(Attendance)
-fungsional: "Create "
+fungsional: Create schedule(attendance)
 gambar:
   - uploads/capture4.1.png
   - uploads/absen-buat.jpg
 super_admin: Allow
 admin: Allow
-mentor: Allow
+mentor: None
 teacher: Pending
 partner: None
 lead_program: Allow
