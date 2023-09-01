@@ -4,6 +4,7 @@ fungsional: View Available Classes
 gambar:
   - uploads/screenshot-from-2023-08-31-11-43-39.png
   - uploads/download-1-.png
+  - uploads/0bf281be-59fa-a821-ca01-2831370ab872.png
 super_admin: Allow
 admin: Allow
 mentor: Allow
