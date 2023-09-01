@@ -4,6 +4,7 @@ fungsional: Chart - Weekly Login
 gambar:
   - uploads/chart1.png
   - uploads/chart-weekly-login.png
+  - uploads/weekly_login_crop.png
 super_admin: Allow
 admin: Allow
 mentor: None
