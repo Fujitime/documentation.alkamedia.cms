@@ -4,6 +4,7 @@ fungsional: Chart - Landing Page Visitors
 gambar:
   - uploads/download-1-.png
   - uploads/screenshot-from-2023-08-31-10-49-13.png
+  - uploads/0a359c3b-8b38-28bb-0488-05692d16b94f.png
 super_admin: Allow
 admin: Allow
 mentor: None
