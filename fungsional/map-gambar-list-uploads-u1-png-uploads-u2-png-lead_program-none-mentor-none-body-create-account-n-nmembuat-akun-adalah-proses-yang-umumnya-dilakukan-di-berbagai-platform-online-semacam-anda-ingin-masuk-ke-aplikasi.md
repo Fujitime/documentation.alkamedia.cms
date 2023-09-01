@@ -18,6 +18,8 @@ support_mobile: Yes
 ---
 ## Membuat Akun di Alkademi
 
+Membuat akun adalah proses yang melibatkan pendaftaran dan pembuatan identifikasi unik untuk mengakses layanan, platform, atau sistem tertentu secara pribadi. Langkah-langkah ini biasanya diperlukan dalam berbagai konteks, termasuk situs web, aplikasi seluler, jejaring sosial, layanan keuangan, dan banyak lagi. Membuat akun memungkinkan pengguna untuk memiliki akses khusus dan personalisasi terhadap berbagai fitur dan konten yang ditawarkan oleh platform tersebut.\
+\
 Membuat akun di platform Alkademi cukup mudah. Ikuti langkah-langkah di bawah ini untuk memulai:
 
 1. **Akses Menu Pengguna**: Setelah membuka platform Alkademi, cari dan klik opsi "Menu Pengguna" atau "User Menu" di bagian atas halaman. Biasanya, ini akan menjadi ikon profil atau tautan yang menunjukkan menu terkait pengguna.
