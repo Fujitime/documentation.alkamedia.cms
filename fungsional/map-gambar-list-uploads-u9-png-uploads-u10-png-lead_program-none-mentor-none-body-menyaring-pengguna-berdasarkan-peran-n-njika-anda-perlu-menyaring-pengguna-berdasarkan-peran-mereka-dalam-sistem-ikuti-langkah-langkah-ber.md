@@ -20,7 +20,7 @@ support_mobile: Yes
 
 Jika Anda perlu menyaring pengguna berdasarkan peran mereka dalam sistem, ikuti langkah-langkah berikut:
 
-1. **Masuk:** Masuk ke akun admin Anda di platform tersebut.
+1. **Masuk:** Masuk ke akun admin Anda di platform tersebut..
 2. **Akses Pengelolaan Pengguna:** Buka bagian "Pengelolaan Pengguna" atau "Pengguna" di panel admin.
 3. **Opsi Penyaringan:** Cari opsi "Penyaringan" atau "Pencarian". Pada beberapa sistem, ini bisa berupa menu dropdown atau bilah pencarian.
 4. **Pilih Penyaringan Peran:** Temukan penyaring yang memungkinkan Anda memilih peran. Ini mungkin diberi label "Peran," "Peran Pengguna," atau sejenisnya.
