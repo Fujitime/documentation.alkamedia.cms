@@ -24,7 +24,7 @@ Langkah-langkahnya adalah sebagai berikut:
 
 **1. Kunjungi halaman registrasi di Alkedemi.id.**
 
-**2﻿. Memilih opsi :** Pilih opsi "Daftar dengan GitHub" atau klik ikon github yang terdapat di bagian pilihan login atau registrasi.
+**2﻿. Memilih opsi :** Pilih opsi "Daftar dengan GitHub" atau klik ikon GitHub yang terdapat di bagian pilihan login atau registrasi.
 
 **3﻿. Pengarahan ke halaman github** : Anda akan diarahkan ke halaman otorisasi GitHub, di mana Anda harus masuk ke akun GitHub Anda (jika belum masuk).
 
