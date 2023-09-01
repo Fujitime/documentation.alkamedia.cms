@@ -45,3 +45,7 @@ body.light {
 .ais-Highlight-highlighted{
   @apply dark:text-white bg-transparent
 }
+
+.animate__fast{
+  --animate-duration: 0.3s;
+}

@@ -83,16 +83,14 @@ const Sidebar: React.FC<{ data: Array<string>, state: [string, React.Dispatch<Re
               {dirs.map((dir, index) => {
               const dropdownId = `dropdown-${index}`;
                 return (
-                  <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300">
+                  <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300 transition-transform duration-200 ease-in-out transform hover:translate-x-[-5px] ">
                     { typeof dir == 'string' ? (
                       <Link to={"/" + dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")} className="p-3">{dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
                     ) : (
                       <>
                         <button
                           type="button"
-                          className="flex items-center w-full p-3 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                          onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)}
-                        >
+                          className={`flex items-center w-full p-3 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${showDropdown === dropdownId ? "bg-gray-200 dark:bg-gray-600" : ""}`}                        >
                           <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
                           <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
