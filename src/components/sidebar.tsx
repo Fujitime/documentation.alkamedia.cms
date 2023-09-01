@@ -3,21 +3,17 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import ThemeToggle from '../components/theme_toggle'
 
-interface All {
-  distinct: Array<string>
-}
-
 interface NestedDir {
   dir: string;
   parents: string[];
 }
 
-const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetStateAction<string>>] }> = ({data, state}) => {
+const Sidebar: React.FC<{ data: Array<string>, state: [string, React.Dispatch<React.SetStateAction<string>>] }> = ({data, state}) => {
   const [role, setRole] = state;
   const [showSidebar, setSidebar] = React.useState<boolean>(false)
   const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
-  let dirs: (NestedDir|string)[] = data.distinct.filter(menu => !menu.includes("("))
-  for(let menu of data.distinct.filter(menu => menu.includes("("))){
+  let dirs: (NestedDir|string)[] = data.filter(menu => !menu.includes("("))
+  for(let menu of data.filter(menu => menu.includes("("))){
     const i = dirs.findIndex(dir => typeof(dir) == 'string' ? menu.includes(dir) : menu.includes(dir.dir))
     if(i >= 0){
       dirs[i] = {
