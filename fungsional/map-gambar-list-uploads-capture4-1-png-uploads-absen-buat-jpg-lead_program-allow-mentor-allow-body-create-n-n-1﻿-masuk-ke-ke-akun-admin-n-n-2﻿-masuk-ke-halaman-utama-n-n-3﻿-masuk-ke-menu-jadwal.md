@@ -16,7 +16,7 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-#### **Creat**
+#### **Creat** schedule (attendance)
 
 **1﻿. Masuk ke ke akun Admin.**
 
