@@ -4,6 +4,7 @@ fungsional: Chart - Most Visited Class
 gambar:
   - uploads/chart-weekly-login.png
   - uploads/chart1.png
+  - uploads/2a8dc792-e34d-f270-72aa-762fba0e730a.png
 super_admin: Allow
 admin: Allow
 mentor: None
