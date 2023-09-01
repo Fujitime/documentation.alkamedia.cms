@@ -2,8 +2,8 @@
 menu: Dashboard
 fungsional: Chart - Program Participants
 gambar:
-  - uploads/screenshot-from-2023-08-31-10-49-13.png
-  - uploads/download.png
+  - uploads/screenshot-from-2023-09-01-17-01-42.png
+  - uploads/stop_replace_my_filea_.png
   - uploads/fa9c558a-cea8-b4fd-2178-bdbccd3b35ec.png
 super_admin: Allow
 admin: Allow
