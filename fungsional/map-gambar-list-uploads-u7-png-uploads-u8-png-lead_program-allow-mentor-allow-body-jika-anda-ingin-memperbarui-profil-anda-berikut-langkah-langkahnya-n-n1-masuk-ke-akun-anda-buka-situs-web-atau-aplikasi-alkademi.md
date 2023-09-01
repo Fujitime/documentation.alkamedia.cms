@@ -23,4 +23,4 @@ Jika Anda ingin memperbarui profil Anda,**berikut langkah langkahnya;**
 3. **Pilih "Edit" atau "Update Profile":** Di halaman profil Anda, akan ada tombol atau tautan yang mengatakan "Edit" atau "Update Profile." Klik tautan ini untuk memulai proses pengeditan.
 4. **Perbarui Informasi:** Anda akan diarahkan ke halaman di mana Anda dapat memperbarui informasi profil Anda. Ini mungkin termasuk foto profil, nama, deskripsi singkat, informasi kontak, dan detail lainnya. Isi atau perbarui informasi sesuai keinginan Anda.
 5. **Simpan Perubahan:** Setelah Anda melakukan perubahan yang diinginkan, pastikan untuk menyimpan perubahan tersebut. Ini dilakukan dengan mengklik tombol "Save" atau "Update" di bagian bawah halaman.
-6. **Selesai:** Setelah Anda selesai menyimpan perubahan dan melakukan verifikasi (jika diperlukan), profil Anda sekarang telah diperbarui dengan informasi terbaru.
+6. **Selesai:** Setelah Anda selesai menyimpan perubahan dan melakukan verifikasi (jika diperlukan), profil Anda sekarang telah diperbarui dengan informasi terbaru..
