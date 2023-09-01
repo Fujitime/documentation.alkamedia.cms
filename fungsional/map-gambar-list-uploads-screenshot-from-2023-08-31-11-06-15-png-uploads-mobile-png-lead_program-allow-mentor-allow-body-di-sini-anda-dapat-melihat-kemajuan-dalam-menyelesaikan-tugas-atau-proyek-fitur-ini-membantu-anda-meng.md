@@ -1,9 +1,10 @@
 ---
 menu: Dashboard
-fungsional: Progress Review Tasks
+fungsional: "Tasks Review Progress "
 gambar:
   - uploads/screenshot-from-2023-08-31-11-06-15.png
   - uploads/mobile.png
+  - uploads/7f1bfaf3-ab13-662f-761f-8d542e334fea.png
 super_admin: Allow
 admin: Allow
 mentor: Allow
