@@ -1,6 +1,6 @@
 ---
 menu: Schedule(Attendance)
-fungsional: Edit
+fungsional: Edit schedule(attendance)
 gambar:
   - uploads/capture4.2.png
   - uploads/capture4.22.png
