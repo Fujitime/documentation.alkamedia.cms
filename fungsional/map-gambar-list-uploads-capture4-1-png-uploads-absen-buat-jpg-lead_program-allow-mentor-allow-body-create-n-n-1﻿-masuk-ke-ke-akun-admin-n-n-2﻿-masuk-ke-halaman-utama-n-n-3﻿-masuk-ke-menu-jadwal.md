@@ -16,11 +16,11 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-#### **Create**
+#### **Creat**
 
-**1﻿. Masuk ke ke akun Admin**
+**1﻿. Masuk ke ke akun Admin.**
 
-**2﻿. Masuk ke halaman utama**
+**2﻿. Masuk ke halaman utama.**
 
 **3﻿.  Masuk ke menu jadwal :** setelah masuk ke halaman utama lalu anda klik menu jadwal keegiatan.
 
