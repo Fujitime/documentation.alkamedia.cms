@@ -21,7 +21,7 @@ support_mobile: Yes
 Jika Anda perlu menemukan pengguna tertentu dalam sistem, ikuti langkah-langkah berikut:
 
 1. **Masuk:** Masuk ke akun Anda di platform tersebut.
-2. **Akses Pencarian Pengguna:** Cari opsi "Cari" atau "Temukan". Ini bisa berupa bilah pencarian di bagian atas halaman atau ikon pencarian khusus.
+2. **Akses Pencarian Pengguna:** Cari opsi "Cari" atau "Temukan". Ini bisa berupa bilah pencarian di bagian atas halaman atau ikon pencarian khusus..
 3. **Masukkan Informasi Pengguna:** Di bilah pencarian, ketik nama pengguna, username, atau informasi lain yang relevan yang dapat membantu Anda mengidentifikasi pengguna.
 4. **Mulai Pencarian:** Tekan "Enter" atau klik ikon pencarian untuk memulai pencarian.
 5. **Lihat Hasil Pencarian:** Sistem akan menampilkan daftar pengguna yang sesuai dengan kriteria pencarian Anda. Telusuri hasilnya untuk menemukan pengguna yang Anda cari.
