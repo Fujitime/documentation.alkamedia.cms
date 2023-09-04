@@ -3,7 +3,7 @@ menu: Dashboard
 fungsional: "Tasks Review Progress "
 gambar:
   - uploads/no_replace_please.png
-  - uploads/mobile.png
+  - uploads/taskreviewprogress.png
   - uploads/7f1bfaf3-ab13-662f-761f-8d542e334fea.png
 super_admin: Allow
 admin: Allow
