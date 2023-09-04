@@ -18,6 +18,8 @@ support_mobile: Yes
 ---
 ## Mencari Pengguna
 
+Panduan ini akan membahas seni dan ilmu dalam mencari pengguna di berbagai platform online dan basis data. Kita akan menjelajahi teknik, alat, dan strategi yang dapat membantu Anda menemukan individu dengan efektif dan efisien. Baik Anda berinteraksi di media sosial, jaringan profesional, atau komunitas online lainnya, menguasai keterampilan pencarian pengguna dapat membuka pintu ke koneksi dan peluang berharga. Jadi, mari kita mulai perjalanan untuk menemukan seluk-beluk "Pencarian Pengguna" dan memanfaatkan kekuatan konektivitas digital di dunia yang semakin terhubung.\
+\
 Jika Anda perlu menemukan pengguna tertentu dalam sistem, ikuti langkah-langkah berikut:
 
 1. **Masuk:** Masuk ke akun Anda di platform tersebut.
