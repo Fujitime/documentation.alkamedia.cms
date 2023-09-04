@@ -2,8 +2,8 @@
 menu: Dashboard
 fungsional: Chart - Weekly Login
 gambar:
-  - uploads/screenshot-from-2023-09-01-17-01-48.png
-  - uploads/chart-weekly-login.png
+  - uploads/weeklyandvisclassdekstop.png
+  - uploads/weeklymob.png
   - uploads/weekly_login_crop.png
 super_admin: Allow
 admin: Allow
