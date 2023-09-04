@@ -21,8 +21,6 @@ Grafik ini menyajikan aktivitas login pengguna dalam periode satu minggu terakhi
 
 ini membantu Anda memantau aktivitas login pengguna dalam skala mingguan. Dengan informasi ini, Anda dapat:
 
-\* Melihat pola tertentu dalam aktivitas login.
-
-\* Mengidentifikasi apakah ada hari-hari atau jam-jam tertentu yang lebih populer untuk login.
-
-\* Mengukur efektivitas promosi atau perubahan pada platform yang mungkin mempengaruhi jumlah login.
+* Melihat pola tertentu dalam aktivitas login.
+* Mengidentifikasi apakah ada hari-hari atau jam-jam tertentu yang lebih populer untuk login.
+* Mengukur efektivitas promosi atau perubahan pada platform yang mungkin mempengaruhi jumlah login.
