@@ -3,6 +3,7 @@ menu: Materi
 fungsional: Delete a course
 gambar:
   - uploads/m6.png
+  - uploads/deletecourse.png
 super_admin: Allow
 admin: Allow
 mentor: None
