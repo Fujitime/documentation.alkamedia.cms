@@ -16,14 +16,14 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-Dalam panduan ini, Anda akan mempelajari berbagai fungsionalitas yang terkait dengan materi dalam sistem kami. Ini termasuk menghapus modul dan ,materi mengedit materi dan modul, serta membuat materi dan modul baru.
+Dalam panduan ini, Anda akan mempelajari berbagai fungsionalitas yang terkait dengan materi dalam sistem kami. Ini termasuk m﻿embuat modul dan mengedit materi, , serta membuat materi dan modul baru.
 
 #### Membuat Materi Baru
 
 Untuk membuat materi baru di platform kami, ikuti langkah-langkah di bawah ini:
 
-1. **Klik Menu Materi**: Setelah membuka platform kami, cari dan klik opsi "Materi" di menu navigasi.
-2. **Tambah Materi Baru**: Di dalam menu materi, cari tombol dengan simbol tambah (+) atau teks "Tambah Materi". Klik tombol ini untuk memulai proses pembuatan materi baru.
+1. **Klik Menu Materi**: Setelah l﻿ogin dan membuka aplikasi , cari dan klik opsi "Materi" di menu navigasi.
+2. **Tambah Materi Baru**: Di dalam menu materi, cari tombol dengan simbol tambah (+) atau teks "+ Materi". Klik tombol ini untuk memulai proses pembuatan materi baru.
 3. **Isi Formulir**: Anda akan diarahkan ke sebuah formulir yang meminta informasi yang diperlukan untuk materi yang baru. Informasi yang biasanya diminta meliputi:
 
    * **Judul Materi**: Masukkan judul yang jelas dan deskriptif untuk materi Anda.
