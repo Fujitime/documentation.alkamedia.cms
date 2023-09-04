@@ -18,6 +18,8 @@ support_mobile: Yes
 ---
 ## Menyaring Pengguna Berdasarkan Peran
 
+Dalam panduan ini, kita akan menjelajahi pentingnya strategi "Penyaringan berdasarkan Peran" dalam berbagai aspek kehidupan, mulai dari jaringan profesional hingga pengambilan keputusan pribadi. Kita akan membahas bagaimana metode ini dapat membantu Anda menyortir data dengan efisien, terhubung dengan orang yang tepat, dan membuat pilihan yang terinformasi sesuai dengan tujuan Anda. Jadi, mari kita mulai perjalanan untuk menemukan kekuatan dan efektivitas penyaringan berdasarkan peran dalam menyederhanakan kehidupan kita yang didorong oleh informasi.\
+\
 Jika Anda perlu menyaring pengguna berdasarkan peran mereka dalam sistem, ikuti langkah-langkah berikut:
 
 1. **Masuk:** Masuk ke akun admin Anda di platform tersebut..
