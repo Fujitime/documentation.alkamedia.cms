@@ -17,4 +17,4 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-Grafik ini menampilkan kelas yang paling sering dikunjungi oleh pengguna. Dengan grafik ini, Anda dapat melihat preferensi pengguna terhadap kelas yang ditawarkan. Ini membantu Anda memahami dengan lebih baik kelas mana yang paling diminati oleh pengguna, memungkinkan Anda untuk merencanakan konten yang lebih sesuai dengan minat mereka.
+Grafik ini menampilkan kelas yang paling sering dikunjungi oleh pengguna. Dengan grafik ini, Anda dapat melihat preferensi pengguna terhadap kelas yang ditawarkan. Ini membantu Anda memahami dengan lebih baik kelas mana yang paling diminati oleh pengguna, memungkinkan Anda untuk merencanakan konten yang lebih sesuai dengan minat mereka
