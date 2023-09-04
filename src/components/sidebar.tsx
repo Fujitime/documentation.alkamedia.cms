@@ -23,6 +23,7 @@ const Sidebar: React.FC<{ data: Array<string>, state: [string, React.Dispatch<Re
     }
   }
 
+
   return (
     <>
     <nav className="fixed backdrop-blur transition-colorsdark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
@@ -81,28 +82,45 @@ const Sidebar: React.FC<{ data: Array<string>, state: [string, React.Dispatch<Re
               </ul>
               </li>
               {dirs.map((dir, index) => {
-              const dropdownId = `dropdown-${index}`;
+                const dropdownId = `dropdown-${index}`;
+                const userLocation = window.location.pathname.replace(/^\/+/, '');
+                const dirMatchesUserLocation = dir + '/' === userLocation;
                 return (
-                  <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300 transition-transform duration-200 ease-in-out transform hover:translate-x-[-5px] ">
-                    { typeof dir == 'string' ? (
-                      <Link to={"/" + dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")} className="p-3">{dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
-                    ) : (
-                      <>
-                        <button
-                          type="button"
-                          className={`flex items-center w-full p-3 text-base transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${showDropdown === dropdownId ? "bg-gray-200 dark:bg-gray-600" : ""}`}                        >
-                          <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
-                          <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-                          </svg>
-                        </button>
-                        <ul id={dropdownId} className={(showDropdown === dropdownId ? "" : "hidden") + " py-2 space-y-2 ml-4"}>
-                          {dir.parents.map((_dir, index) => (
-                            <li key={dir.dir + index}>
+                  <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300 transition-transform duration-200 ease-in-out transform hover:translate-x-[5px]">
+                      <span className={`w-3 h-3 rounded-full inline-block ${dirMatchesUserLocation ? 'bg-indigo-500' : ''}`}></span>
+                      { typeof dir == 'string' ? (
+                        <Link to={"/" + dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")} className="p-3">{dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
+                      ) : (
+                        <>
+                      <button
+                        type="button"
+                        className="flex items-center w-full p-3 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)}
+                      >
+                        <span className="flex-1 text-left whitespace-nowrap capitalize">
+                          {userLocation.startsWith(dir.dir) && (
+                            <span className={`w-3 h-3 rounded-full mr-3 inline-block bg-indigo-500`}></span>
+                          )}
+                          {dir.dir}
+                        </span>
+                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                      </button>
+                        <ul id={dropdownId} className={(showDropdown === dropdownId ? "" : "hidden") + " py-2 space-y-4 ml-3"}>
+                        {dir.parents.map((_dir, index) => {
+                          const dirUserName = _dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")
+                          const dirUserLocation =  dirUserName + '/' === userLocation;
+                          return (
+                            <li key={dir.dir + index} >
+                              {dirUserLocation  && (
+                                <span className={`w-3 h-3 mr-3 rounded-full inline-block bg-indigo-500`}></span>
+                              )}
                               <Link to={"/" + _dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")}>{_dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
                             </li>
-                          ))}
-                        </ul>
+                          );
+                        })}
+                      </ul>
                       </>
                     )}
                   </li>
