@@ -3,7 +3,7 @@ menu: Dashboard
 fungsional: Top Weekly Leaderboard
 gambar:
   - uploads/screenshot-from-2023-09-01-17-35-43.png
-  - uploads/download.png
+  - uploads/weeklyvisitor.png
   - uploads/537c8421-d343-7883-cfd4-b36a0a432a6d.png
 super_admin: Allow
 admin: Allow
