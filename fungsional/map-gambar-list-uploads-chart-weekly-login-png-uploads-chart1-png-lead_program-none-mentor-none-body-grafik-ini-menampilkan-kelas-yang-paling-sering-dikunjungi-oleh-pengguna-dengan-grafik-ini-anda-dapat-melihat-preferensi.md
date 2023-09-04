@@ -3,7 +3,7 @@ menu: Dashboard
 fungsional: Chart - Most Visited Class
 gambar:
   - uploads/screenshot-from-2023-09-01-17-01-34.png
-  - uploads/chart-weekly-login.png
+  - uploads/visitedclassmob.png
   - uploads/2a8dc792-e34d-f270-72aa-762fba0e730a.png
 super_admin: Allow
 admin: Allow
