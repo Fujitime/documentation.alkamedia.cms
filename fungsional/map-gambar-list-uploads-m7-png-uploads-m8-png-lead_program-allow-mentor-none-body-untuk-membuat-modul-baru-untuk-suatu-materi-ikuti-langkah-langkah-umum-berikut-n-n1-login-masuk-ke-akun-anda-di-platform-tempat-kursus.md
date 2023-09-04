@@ -3,7 +3,7 @@ menu: Materi
 fungsional: Create a new Module
 gambar:
   - uploads/m7.png
-  - uploads/m8.png
+  - uploads/createmodule.png
 super_admin: Allow
 admin: Allow
 mentor: None
