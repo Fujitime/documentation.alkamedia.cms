@@ -4,6 +4,7 @@ import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import Sidebar from "../components/sidebar"
+import Search from "../components/search";
 import "animate.css"
 
 const pageStyles = {
@@ -30,9 +31,6 @@ interface FrontMatter {
 
 
 interface Data {
-  all: {
-    distinct: Array<string>
-  };
   docs: {
     edges: Array<{
       node: {
@@ -44,9 +42,10 @@ interface Data {
   };
 }
 
-const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({data, pageContext}) => {
+const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string, all: Array<string> }}> = ({data, pageContext}) => {
   const [role, setRole] = React.useState<string | keyof FrontMatter>("all");
   const [showBackToTop, setShowBackToTop] = React.useState(false);
+  const [modal, setModal] = React.useState(false);
 
   const handleScroll = () => {
     setShowBackToTop(window.scrollY > 150);
@@ -79,15 +78,36 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
         </svg>
       </button>
-      <Sidebar data={data.all} state={[role, setRole]} />
+      <Sidebar data={pageContext.all} state={[role, setRole]} />
       <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-2">
+        <div className="w-full sm:max-w-[94%] pt-6 mx-auto">
+          <button type="submit" onClick={() => setModal(!modal)} className="w-full font-thin text-xl text-gray-700 dark:text-gray-300 text-left border-b border-gray-500 dark:border-gray-400 flex items-center px-1">
+              <svg fill="rgb(107 114 128)" xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 0 512 512">
+                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+              </svg>
+            <span className="ml-2 sm:ml-4">Search</span>
+          </button>
+        </div>
+        { modal ? (
+          <div className="animate__animated animate__fadeIn animate__fast w-full _sm:left-0 sm:max-w-[60%] absolute z-[60] top-[4rem] sm:top-[3rem] h-auto bg-slate-100 dark:bg-gray-800/95 rounded px-2 py-1 pb-8 sm:pb-2.5">
+            <div className="flex w-full justify-end mb-2">
+              <button type="button" className="text-gray-600 dark:text-gray-300 bg-transparent hover:bg-gray-200 hover:text-gray-700 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-900 dark:hover:text-white" onClick={() => setModal(false)}>
+                <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span className="sr-only">Close modal</span>
+              </button>
+            </div>
+            <Search/>
+          </div>
+        ) : (<></>)}
         <div className="mt-8 mb-3 text-gray-700 dark:text-gray-300">
-          <h1 className="font-semibold text-4xl capitalize mb-1 ">{pageContext.pageName}</h1>
+          <h1 className="font-semibold text-4xl capitalize mb-1 my-5 ">{pageContext.pageName}</h1>
             <ul className="max-w-md gap-1 text-gray-500 list-none dark:text-gray-400">
             {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
               return (
                 <li key={edge.node.id}>
-                  <Link to={"#" + edge.node.frontmatter.fungsional} className="hover:text-gray-700 text-xl hover:dark:text-gray-300"><span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{edge.node.frontmatter.fungsional} </Link>
+                  <Link to={"#" + edge.node.frontmatter.fungsional.trim()} className="hover:text-gray-700 text-xl hover:dark:text-gray-300"><span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{edge.node.frontmatter.fungsional.trim()} </Link>
                 </li>
               )
             })}
@@ -98,9 +118,9 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
             const frontmatter = edge.node.frontmatter
             const images = frontmatter.gambar?.map(v => v.childImageSharp) || [];
             return (
-              <li id={frontmatter.fungsional} key={edge.node.id} className="mb-4 pt-16">
+              <li id={frontmatter.fungsional.trim()} key={edge.node.id} className="mb-4 pt-16">
                 <div>
-                  <h1 className="dark:text-slate-200 font-semibold mb-1 text-2xl sm:text-3xl"><span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{frontmatter.fungsional}</h1>
+                  <h1 className="dark:text-slate-200 font-semibold mb-1 text-2xl sm:text-3xl"><span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{frontmatter.fungsional.trim()}</h1>
                   <span className={`text-slate-200 text-sm rounded-lg px-1.5 py-[0.075] ${frontmatter.support_mobile == "Yes" ? "bg-blue-500" : "bg-red-500"}`}>{frontmatter.support_mobile == "Yes" ? "Support Mobile" : "Not Support Mobile"}</span>
                   <article className="w-full dark:text-slate-300 font-light prose lg:prose-xl dark:prose-invert mt-3 mb-1" dangerouslySetInnerHTML={{ __html: edge.node.html}}></article>
                   {images.length > 0 ? (
@@ -125,9 +145,6 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string }}> = ({
 export default IndexPage
 
 export const query = graphql`query($category: String) {
-  all: allMarkdownRemark {
-    distinct(field: {frontmatter: {menu: SELECT}})
-  }
   docs: allMarkdownRemark (filter: {frontmatter: {menu: {eq: $category}}}) {
     edges {
       node {

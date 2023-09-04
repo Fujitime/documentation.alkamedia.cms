@@ -1,4 +1,55 @@
 import type { GatsbyConfig } from "gatsby";
+import * as dotenv from 'dotenv'
+dotenv.config();
+
+const query = `
+  query {
+    docs: allMarkdownRemark {
+      edges {
+        node {
+          html
+          frontmatter {
+            fungsional
+            menu
+          }
+          id
+        }
+      }
+    }
+  }
+`
+
+interface Data {
+  docs: {
+    edges: Array<{
+      node: {
+        html: string;
+        frontmatter: {
+          fungsional: string;
+          menu: string;
+        };
+        id: string;
+      };
+    }>;
+  };
+}
+const queries = [
+  {
+    query,
+    queryVariables: {},
+    transformer: ({ data }: { data: Data}) => data.docs.edges.map(v => {
+      return {
+        html: v.node.html,
+        menu: v.node.frontmatter.menu,
+        fungsional: v.node.frontmatter.fungsional,
+        id: v.node.id} 
+    }),
+    indexName: 'dev.documentation.alkamedia.cms',
+    settings: {
+    },
+    mergeSettings: false,
+  },
+]
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -17,7 +68,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
-    `gatsby-plugin-dark-mode`,
+    "gatsby-plugin-dark-mode",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -65,6 +116,28 @@ const config: GatsbyConfig = {
             },
           },
         ],
+      },
+    },
+    {
+      // This plugin must be placed last in your list of plugins to ensure that it can query all the GraphQL data
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APPID,
+        // Use Admin API key without GATSBY_ prefix, so that the key isn't exposed in the application
+        // Tip: use Search API key with GATSBY_ prefix to access the service from within components
+        apiKey: process.env.ALGOLIA_APIKEY,
+        indexName: process.env.ALGOLIA_INDEXNAME, // for all queries
+        queries,
+        chunkSize: 10000, // default: 1000
+        settings: {
+          // optional, any index settings
+          // Note: by supplying settings, you will overwrite all existing settings on the index
+        },
+        mergeSettings: false, // optional, defaults to false. See notes on mergeSettings below
+        concurrentQueries: false, // default: true
+        dryRun: false, // default: false, only calculate which objects would be indexed, but do not push to Algolia
+        continueOnFailure: false, // default: false, don't fail the build if Algolia indexing fails
+        algoliasearchOptions: undefined, // default: { timeouts: { connect: 1, read: 30, write: 30 } }, pass any different options to the algoliasearch constructor
       },
     },
   ]

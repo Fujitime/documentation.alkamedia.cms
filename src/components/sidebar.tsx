@@ -3,21 +3,17 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import ThemeToggle from '../components/theme_toggle'
 
-interface All {
-  distinct: Array<string>
-}
-
 interface NestedDir {
   dir: string;
   parents: string[];
 }
 
-const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetStateAction<string>>] }> = ({data, state}) => {
+const Sidebar: React.FC<{ data: Array<string>, state: [string, React.Dispatch<React.SetStateAction<string>>] }> = ({data, state}) => {
   const [role, setRole] = state;
   const [showSidebar, setSidebar] = React.useState<boolean>(false)
   const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
-  let dirs: (NestedDir|string)[] = data.distinct.filter(menu => !menu.includes("("))
-  for(let menu of data.distinct.filter(menu => menu.includes("("))){
+  let dirs: (NestedDir|string)[] = data.filter(menu => !menu.includes("("))
+  for(let menu of data.filter(menu => menu.includes("("))){
     const i = dirs.findIndex(dir => typeof(dir) == 'string' ? menu.includes(dir) : menu.includes(dir.dir))
     if(i >= 0){
       dirs[i] = {
@@ -26,6 +22,7 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
       }
     }
   }
+
 
   return (
     <>
@@ -85,30 +82,45 @@ const Sidebar: React.FC<{ data: All, state: [string, React.Dispatch<React.SetSta
               </ul>
               </li>
               {dirs.map((dir, index) => {
-              const dropdownId = `dropdown-${index}`;
+                const dropdownId = `dropdown-${index}`;
+                const userLocation = window.location.pathname.replace(/^\/+/, '');
+                const dirMatchesUserLocation = dir + '/' === userLocation;
                 return (
-                  <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300">
-                    { typeof dir == 'string' ? (
-                      <Link to={"/" + dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")} className="p-3">{dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
-                    ) : (
-                      <>
-                        <button
-                          type="button"
-                          className="flex items-center w-full p-3 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                          onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)}
-                        >
-                          <span className="flex-1 text-left whitespace-nowrap capitalize">{dir.dir}</span>
-                          <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-                          </svg>
-                        </button>
-                        <ul id={dropdownId} className={(showDropdown === dropdownId ? "" : "hidden") + " py-2 space-y-2 ml-4"}>
-                          {dir.parents.map((_dir, index) => (
-                            <li key={dir.dir + index}>
+                  <li key={index} className="capitalize font-normal text-gray-700 dark:text-slate-300 transition-transform duration-200 ease-in-out transform hover:translate-x-[5px]">
+                      <span className={`w-3 h-3 rounded-full inline-block ${dirMatchesUserLocation ? 'bg-indigo-500' : ''}`}></span>
+                      { typeof dir == 'string' ? (
+                        <Link to={"/" + dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")} className="p-3">{dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
+                      ) : (
+                        <>
+                      <button
+                        type="button"
+                        className="flex items-center w-full p-3 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        onClick={() => setShowDropdown(showDropdown === dropdownId ? null : dropdownId)}
+                      >
+                        <span className="flex-1 text-left whitespace-nowrap capitalize">
+                          {userLocation.startsWith(dir.dir) && (
+                            <span className={`w-3 h-3 rounded-full mr-3 inline-block bg-indigo-500`}></span>
+                          )}
+                          {dir.dir}
+                        </span>
+                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                      </button>
+                        <ul id={dropdownId} className={(showDropdown === dropdownId ? "" : "hidden") + " py-2 space-y-4 ml-3"}>
+                        {dir.parents.map((_dir, index) => {
+                          const dirUserName = _dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")
+                          const dirUserLocation =  dirUserName + '/' === userLocation;
+                          return (
+                            <li key={dir.dir + index} >
+                              {dirUserLocation  && (
+                                <span className={`w-3 h-3 mr-3 rounded-full inline-block bg-indigo-500`}></span>
+                              )}
                               <Link to={"/" + _dir.replace(/(\w+)\((\w+)\)/g, "$1/$2")}>{_dir.replace(/\w+\((.*?)\)/g, "$1")}</Link>
                             </li>
-                          ))}
-                        </ul>
+                          );
+                        })}
+                      </ul>
                       </>
                     )}
                   </li>
