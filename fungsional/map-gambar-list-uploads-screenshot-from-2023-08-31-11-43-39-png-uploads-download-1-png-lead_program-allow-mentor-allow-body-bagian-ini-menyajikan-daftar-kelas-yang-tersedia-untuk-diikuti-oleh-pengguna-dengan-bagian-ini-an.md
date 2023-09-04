@@ -2,8 +2,8 @@
 menu: Dashboard
 fungsional: View Available Classes
 gambar:
-  - uploads/screenshot-from-2023-09-01-17-38-14.png
-  - uploads/download-1-.png
+  - uploads/viewavailableclassdekstop.png
+  - uploads/viewavailableclassmob.png
   - uploads/0bf281be-59fa-a821-ca01-2831370ab872.png
 super_admin: Allow
 admin: Allow
