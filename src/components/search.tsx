@@ -47,7 +47,7 @@ const Search = () => (
 
 const DefaultHitComponent: React.FC<{ hit: any }> = ({ hit }) => (
     <div className='flex flex-col w-full'>
-      <Link to={`/${hit.menu}#${hit.fungsional}`}>
+      <Link to={`/${hit.menu.replace(/(\w+)\((\w+)\)/g, "$1/$2")}#${hit.fungsional}`}>
         <div className='px-4 py-3.5 w-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-100 hover:dark:bg-gray-900 rounded-[0.250rem] my-[0.15rem]'>
             <div className='dark:text-gray-50'>
                 <span className='mr-[0.10rem] text-2xl text-indigo-500 dark:text-indigo-400'>#</span><Highlight className='font-semibold ' attribute="fungsional" hit={hit} />
