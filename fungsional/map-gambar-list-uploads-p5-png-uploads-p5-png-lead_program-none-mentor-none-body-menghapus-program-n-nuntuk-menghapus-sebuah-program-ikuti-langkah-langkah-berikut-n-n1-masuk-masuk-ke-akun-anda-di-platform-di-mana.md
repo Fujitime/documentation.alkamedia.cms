@@ -18,7 +18,11 @@ support_mobile: Yes
 ---
 ## Menghapus Program
 
-Untuk menghapus sebuah program, ikuti langkah-langkah berikut:
+Proses penghapusan program adalah langkah penting dalam mengelola platform atau sistem yang memungkinkan pembuatan dan pengaturan program-program pendidikan atau pelatihan. Menghapus program dari platform tersebut dapat berkaitan dengan berbagai alasan, seperti pembaruan kurikulum, program yang sudah tidak relevan, atau penghentian program tertentu.
+
+Proses penghapusan program ini melibatkan tindakan hati-hati dan pertimbangan yang matang. Sebuah program yang dihapus harus dikelola dengan baik agar tidak berdampak negatif pada pengguna atau data terkait. Langkah-langkah ini melibatkan pencopotan akses, pemindahan data atau informasi yang relevan, dan komunikasi yang jelas kepada semua pihak yang terlibat.\
+\
+Untuk menghapus sebuah program di alkademi, ikuti langkah-langkah berikut:
 
 1. **Masuk:** Masuk ke akun Anda di platform di mana program tersebut dihosting.
 2. **Akses Pengelolaan Program:** Navigasi ke bagian di mana Anda mengelola program-program Anda. Ini bisa disebut "Program Saya," "Pengelolaan Program," atau sejenisnya.
