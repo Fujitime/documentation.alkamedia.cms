@@ -2,7 +2,7 @@
 menu: Dashboard
 fungsional: Chart - Landing Page Visitors
 gambar:
-  - uploads/yahh.png
+  - uploads/landingpagevisitormob.png
   - uploads/screenshot-from-2023-09-01-17-01-42.png
   - uploads/0a359c3b-8b38-28bb-0488-05692d16b94f.png
 super_admin: Allow
