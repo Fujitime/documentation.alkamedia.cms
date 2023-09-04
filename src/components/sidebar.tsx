@@ -28,8 +28,6 @@ const Sidebar: React.FC<{ data: Array<string>, pageName: string, state: [string,
     }
   }
 
-  console.log(dirs)
-
 
   return (
     <>
