@@ -3,7 +3,7 @@ menu: Materi
 fungsional: Edit a Module
 gambar:
   - uploads/m9.png
-  - uploads/m10.png
+  - uploads/editmodule.png
 super_admin: Allow
 admin: Allow
 mentor: None
