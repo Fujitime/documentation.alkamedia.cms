@@ -16,7 +16,7 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-#### Membuat Materi Baru
+#### Membuat Module Baru
 
 Untuk membuat modul baru untuk suatu materi, ikuti langkah-langkah umum berikut:
 
