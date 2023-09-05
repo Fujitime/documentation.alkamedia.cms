@@ -18,15 +18,12 @@ support_mobile: Yes
 ---
 #### Mengedit Materi
 
-Untuk mengedit materi yang sudah ada di platform kami, ikuti langkah-langkah umum berikut:
+Untuk mengedit materi, ikuti langkah-langkah umum berikut:
 
-1. **Masuk**: Login ke akun Anda di platform tempat materi tersebut dihosting.
-2. **Akses Pengelolaan Materi**: Arahkan ke bagian di mana Anda mengelola materi-materi Anda.
-3. **Temukan Materi**: Temukan materi yang ingin Anda edit dari daftar materi Anda.
-4. **Edit Detail Materi**: Klik judul materi atau tombol/ikon "Edit" yang terkait dengannya. Ini akan membawa Anda ke halaman di mana Anda bisa mengubah detail materi.
-5. **Lakukan Edit**: Perbarui detail materi sesuai kebutuhan. Ini bisa mencakup mengubah judul materi, deskripsi materi, standar kelulusan, dan tipe materi.
-6. **Simpan Perubahan**: Setelah melakukan edit yang diperlukan, simpan perubahan Anda. Ini bisa dilakukan dengan mengklik tombol "Simpan" atau "Perbarui."
-7. **Review Edit**: Sebelum mengonfirmasi, tinjau semua perubahan Anda untuk memastikan keakuratan.
-8. **Publikasikan atau Perbarui**: Tergantung pada apakah materi tersebut sudah dipublikasikan sebelumnya, Anda mungkin perlu mempublikasikannya untuk menerapkan perubahan. Jika materi tersebut sudah dipublikasikan sebelumnya, memperbarui akan mencerminkan perubahan yang Anda lakukan.
+1. **Akses Materi**: Arahkan ke bagian yang sudah dibuat sebelumnya.
+2. **Temukan Materi**: Temukan materi yang ingin Anda edit dari daftar materi Anda.
+3. **Edit Detail Materi**: Klik judul materi atau tombol/ikon pensil "Edit"  Ini akan membawa Anda ke halaman di mana Anda bisa mengubah detail materi 
+4. **Lakukan Edit**: Perbarui detail materi sesuai kebutuhan. Ini bisa mencakup mengubah judul materi, deskripsi materi, standar kelulusan, dan tipe materi.
+5. **Simpan Perubahan**: Setelah melakukan edit yang diperlukan, simpan perubahan Anda. Ini bisa dilakukan dengan mengklik tombol "Simpan" atau "Submit".
 
 Dengan mengikuti langkah-langkah ini, Anda dapat dengan mudah mengedit dan memperbarui materi sesuai dengan kebutuhan Anda.
