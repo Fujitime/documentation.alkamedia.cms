@@ -16,15 +16,15 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-Untuk mengedit modul dalam suatu materi, ikuti langkah-langkah umum berikut:
+#### Mengedit Module
 
-1. **Login:** Masuk ke akun Anda di platform tempat materi tersebut dihosting.
-2. **Akses Pengelolaan Materi:** Arahkan ke bagian di mana Anda mengelola materi-materi Anda.
-3. **Pilih Materi:** Pilih materi tertentu yang berisi modul yang ingin Anda edit.
-4. **Akses Modul:** Di dalam antarmuka pengelolaan materi, temukan modul yang ingin Anda edit dan klik opsi "Edit."
-5. **Edit Detail Modul:** Perbarui detail modul sesuai kebutuhan. Anda mungkin bisa mengubah judul modul, deskripsi, atau informasi relevan lainnya.
-6. **Ubah Konten:** Jika platform Anda mendukungnya, Anda dapat mengubah konten di dalam modul. Ini bisa melibatkan menambahkan, menghapus, atau mengedit pelajaran, tugas, kuis, dan elemen konten lainnya.
-7. **Simpan Perubahan:** Setelah melakukan edit yang diperlukan, simpan perubahan Anda dengan mengklik tombol "Simpan" atau "Perbarui."
-8. **Review Edit:** Sebelum mengonfirmasi, tinjau perubahan yang Anda buat untuk memastikan semuanya akurat dan berfungsi seperti yang diharapkan.
-9. **Publikasikan Perubahan:** Jika kursus sebelumnya sudah dipublikasikan, perubahan yang Anda buat pada modul mungkin perlu dipublikasikan atau diperbarui agar dapat dilihat oleh mahasiswa.
-10. **Uji dan Verifikasi:** Sebaiknya Anda menguji konten dan fungsionalitas modul untuk memastikan bahwa perubahan yang Anda buat berfungsi dengan benar.
+Untuk mengedit modul yang sudah ada di suatu materi, ikuti langkah-langkah berikut:
+
+1. **Klik Menu Materi**: Setelah login dan membuka aplikasi, cari dan klik opsi "Materi" di menu navigasi.
+2. **Pilih Materi**: Pilih materi tertentu yang berisi modul yang ingin Anda edit.
+3. **Akses Halaman Edit Module**: Klik tombol "Lihat Module" di materi yang akan Anda tambahkan module. Ini akan membawa Anda ke halaman modul yang sudah ada.
+4. **Edit Detail Modul**: Pada halaman modul yang sudah ada, cari opsi "Edit" atau tombol yang mengindikasikan pengeditan. Klik opsi ini untuk memulai pengeditan modul.
+5. **Perbarui Detail Modul**: Perbarui detail modul sesuai kebutuhan. Ini bisa mencakup mengubah judul modul, deskripsi singkat, dan informasi lain yang relevan.
+6. **Simpan dan Publikasikan**: Setelah Anda melakukan edit yang diperlukan, klik tombol "Simpan" atau "Submit" untuk menyimpan perubahan Anda. Jika modul tersebut memerlukan publikasi, pastikan untuk mempublikasikannya agar dapat diakses oleh publik.
+
+Dengan mengikuti langkah-langkah ini, Anda dapat dengan mudah mengedit modul yang ada dalam materi sesuai dengan kebutuhan Anda.
