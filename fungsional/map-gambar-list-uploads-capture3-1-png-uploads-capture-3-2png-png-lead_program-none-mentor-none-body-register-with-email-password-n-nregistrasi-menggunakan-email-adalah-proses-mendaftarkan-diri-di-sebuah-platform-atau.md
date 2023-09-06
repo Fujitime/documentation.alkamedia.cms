@@ -20,7 +20,7 @@ support_mobile: Yes
 
 Registrasi menggunakan email adalah proses mendaftarkan diri di sebuah platform atau situs web dengan menggunakan alamat email sebagai identifikasi.
 
-B﻿erikut langkah-langkah Registrasi pada platform alkademi.id  :
+B﻿erikut langkah-langkah Registrasi pada platform alkademi.id :
 
 **1. Buka Situs Web:** Buka browser dan akses situs web alkademi.id.
 
