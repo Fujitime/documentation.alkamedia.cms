@@ -16,7 +16,7 @@ industri: Pending
 student: Allow
 support_mobile: Yes
 ---
-#### Register with Github
+#### Register With Github
 
 Pada website Alkedemi.id, Anda dapat melakukan proses registrasi dengan cepat dan mudah menggunakan akun GitHub Anda. 
 
