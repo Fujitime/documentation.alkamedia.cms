@@ -22,8 +22,8 @@ Login dengan email dan kata sandi" mengacu pada metode otentikasi umum yang digu
 
 Login dengan email dan kata sandi cukup mudah. Ikuti langkah langkah di bawah ini:
 
-***1﻿.masuk ke halaman login** :* Untuk bisa mengakses halaman login pengguna perlu mengakses website alkademi.id  terlebih dahulu, setelah webisite alkademi.id dapat di akses pangguna akan di arahkan ke halaman arahan, setelah masuk ke dalam halaman arahan silahkan klik garis tiga di bagian pojok kanan atas lalu klik opsi masuk.
+**1﻿.masuk ke halaman login** :* Untuk bisa mengakses halaman login pengguna perlu mengakses website alkademi.id  terlebih dahulu, setelah webisite alkademi.id dapat di akses pangguna akan di arahkan ke halaman arahan, setelah masuk ke dalam halaman arahan silahkan klik garis tiga di bagian pojok kanan atas lalu klik opsi masuk.
 
-***2.memasukan email & password** :* S﻿etelah masuk ke halaman login pengguna akan di minta untuk memasukan  email & password yang valid, s﻿etelah memasukan email & password  lalu klik tombol masuk.
+**2.memasukan email & password** :* S﻿etelah masuk ke halaman login pengguna akan di minta untuk memasukan  email & password yang valid, s﻿etelah memasukan email & password  lalu klik tombol masuk.
 
-***3﻿.selesai:*** selamat anda berhasil  login menggunakan email & password.
+**3﻿.selesai*:*** selamat anda berhasil  login menggunakan email & password.
