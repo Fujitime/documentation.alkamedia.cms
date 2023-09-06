@@ -32,8 +32,8 @@ Untuk membuat absen pada kelas , ikuti langkah-langkah di bawah ini:
 
 **4﻿. Isi Form Absensi :** Setelah masuk silahkan isi Form Absen yang terdiri dari :
 
-   1. Waktu Absen
+   a. Waktu Absen
 
-   2.Aktifkan Absen Pada Hari
+   b. Aktifkan Absen Pada Hari   
 
 **5﻿. Klik Simpan :** Setalah Form ter isi Klik **"Simpan'** untuk menyimpan absen yang telah di buat.
