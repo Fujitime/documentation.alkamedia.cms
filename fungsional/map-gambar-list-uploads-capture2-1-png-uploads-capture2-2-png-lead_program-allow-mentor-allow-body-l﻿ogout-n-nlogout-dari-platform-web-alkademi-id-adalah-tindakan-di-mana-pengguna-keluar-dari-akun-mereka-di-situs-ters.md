@@ -30,4 +30,4 @@ B﻿erikut langkah-langkah untuk melakukan logout pada platform web Alkademi.id 
 
 **4. Konfirmasi Logout:** Beberapa platform mungkin meminta konfirmasi tambahan sebelum Anda benar-benar keluar. Jika diminta, klik "Ya" atau "Keluar" untuk mengonfirmasi bahwa Anda ingin logout.
 
-**5. Logout Selesai:** Setelah Anda mengkonfirmasi logout, Anda akan dikeluarkan dari akun Anda dan diarahkan kembali ke halaman login atau halaman awal situs Alkademi.id..
+**5. Logout Selesai:** Setelah Anda mengkonfirmasi logout, Anda akan dikeluarkan dari akun Anda dan diarahkan kembali ke halaman login atau halaman awal situs Alkademi.id.
