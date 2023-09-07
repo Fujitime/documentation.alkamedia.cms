@@ -1,6 +1,6 @@
 ---
 menu: Schedule(Attendance)
-fungsional: Checkout
+fungsional: Checkout Scedule(Attendance)
 gambar:
   - uploads/0937cab0-4d10-4346-bc96-df2861ccb2cf.jpg
   - uploads/3fcd4ac4-025b-45f1-b46a-7159168d457f.jpg
