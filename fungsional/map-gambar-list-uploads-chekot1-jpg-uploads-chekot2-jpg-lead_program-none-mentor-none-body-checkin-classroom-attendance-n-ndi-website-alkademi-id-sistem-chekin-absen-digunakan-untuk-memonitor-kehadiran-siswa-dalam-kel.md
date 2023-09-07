@@ -24,6 +24,8 @@ Dalam sistem Chekin Absen, pengajar memiliki kemampuan untuk melihat laporan keh
 
 B﻿erikut langkah-langkah melakukan chekin absensi :
 
-1.﻿ Klik Menu Kelas : *Setelah login dan membuka aplikasi , cari dan klik opsi "KELAS"* di menu navigasi.
+1.﻿ Klik Menu Kelas : *Setelah login*  menggunakan akun student *dan membuka aplikasi , cari dan klik opsi "KELAS"* di menu navigasi.
 
-*2﻿. Pilih Kelas :* Setelah masuk silahkan pilih kelas yang akan anda lakukan download pada bagian Rekap absensi.
+*2﻿. Pilih Kelas :* Se.
+
+3﻿.
