@@ -1,6 +1,6 @@
 ---
 menu: Schedule(Attendance)
-fungsional: Checkin
+fungsional: Checkin Schedule(Attendance)
 gambar:
   - uploads/cd91a3cc-5f57-4fbb-bf88-d2494c5e2bd7.jpg
   - uploads/764cc5cc-6232-4bb1-b73a-21bf24553eaa.jpg
