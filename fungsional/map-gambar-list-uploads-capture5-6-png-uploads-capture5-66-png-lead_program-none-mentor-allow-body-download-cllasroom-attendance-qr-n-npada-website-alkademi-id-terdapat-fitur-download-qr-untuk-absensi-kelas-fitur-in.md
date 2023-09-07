@@ -24,10 +24,10 @@ Dengan menggunakan fitur download QR di Alkademi.id, pengajar dapat mempercepat 
 
 U﻿ntuk mendownload QR Silahkan ikuti langkah-langkah berikut ini:
 
-1.﻿ Klik Menu Kelas : *Setelah login dan membuka aplikasi , cari dan klik opsi "KELAS"* di menu navigasi.
+**1.﻿ Klik Menu Kelas :** Setelah login dan membuka aplikasi , cari dan klik opsi "KELAS" di menu navigasi.
 
-*2﻿. Pilih Kelas :* Setelah masuk silahkan pilih kelas yang akan anda lakukan download pada bagian "QR".
+**2﻿. Pilih Kelas :** Setelah masuk silahkan pilih kelas yang akan anda lakukan download pada bagian "QR".
 
-3﻿. Download QR : Setelah masuk pada kelas lalu klik tombol "Download QR" untuk mendownload QR Absensi.
+**3﻿. Download QR :** Setelah masuk pada kelas lalu klik tombol "Download QR" untuk mendownload QR Absensi.
 
-4﻿.Selesai : Anda berhasil mendownload QR Absensi.
+**4﻿. Selesai :** Anda berhasil mendownload QR Absensi.
