@@ -18,12 +18,12 @@ support_mobile: Yes
 ---
 ## Membuat Akun di Alkademi
 
-Membuat akun adalah proses yang melibatkan pendaftaran dan pembuatan identifikasi unik untuk mengakses layanan, platform, atau sistem tertentu secara pribadi. Langkah-langkah ini biasanya diperlukan dalam berbagai konteks, termasuk situs web, aplikasi seluler, jejaring sosial, layanan keuangan, dan banyak lagi. Membuat akun memungkinkan pengguna untuk memiliki akses khusus dan personalisasi terhadap berbagai fitur dan konten yang ditawarkan oleh platform tersebut.\
+Membuat akun adalah proses yang melibatkan pendaftaran dan pembuatan identifikasi unik untuk mengakses layanan, platform, atau sistem tertentu secara pribadi. Langkah-langkah ini biasanya diperlukan dalam berbagai konteks, termasuk situs web, aplikasi seluler, jejaring sosial, dan banyak lagi. Membuat akun memungkinkan pengguna untuk memiliki akses khusus dan personalisasi terhadap berbagai fitur dan konten yang ditawarkan oleh platform tersebut.\
 \
 Membuat akun di platform Alkademi cukup mudah. Ikuti langkah-langkah di bawah ini untuk memulai:
 
-1. **Akses Menu Pengguna**: Setelah membuka platform Alkademi, cari dan klik opsi "Menu Pengguna" atau "User Menu" di bagian atas halaman. Biasanya, ini akan menjadi ikon profil atau tautan yang menunjukkan menu terkait pengguna.
-2. **Tambah Pengguna Baru**: Di dalam menu pengguna, cari tombol dengan simbol tambah (+) atau teks "Tambah Pengguna" / "Add User". Klik tombol ini untuk memulai proses pembuatan akun baru.
+1. **Akses Menu Pengguna**: Setelah membuka platform Alkademi, cari dan klik opsi "Menu Pengguna" atau "User Menu". Biasanya, ini akan menjadi ikon profil atau tautan yang menunjukkan menu terkait pengguna.
+2. **Tambah Pengguna Baru**: Di dalam menu user, cari tombol dengan simbol tambah (+) atau teks "Tambah Pengguna" / "Add User". Klik tombol ini untuk memulai proses pembuatan akun baru.
 3. **Pilih Jenis Akun**: Anda akan diarahkan ke halaman di mana Anda dapat memilih jenis akun yang ingin Anda buat. Pilihlah jenis akun yang sesuai dengan peran atau tujuan Anda di platform ini.
 4. **Masukkan Data**: Isi formulir yang muncul dengan informasi yang diperlukan. Biasanya, informasi ini termasuk nama lengkap, alamat email, kata sandi, dan informasi tambahan seperti tanggal lahir atau alamat.
 5. **Verifikasi Data**: Pastikan untuk memeriksa kembali data yang Anda masukkan. Pastikan tidak ada kesalahan ketik atau informasi yang kurang tepat.
