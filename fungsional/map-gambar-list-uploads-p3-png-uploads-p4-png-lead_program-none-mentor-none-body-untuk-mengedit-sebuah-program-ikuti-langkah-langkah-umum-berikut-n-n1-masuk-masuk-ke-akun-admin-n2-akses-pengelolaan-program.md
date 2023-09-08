@@ -16,7 +16,7 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-T﻿idak hanya membuat saja,selain itu anda juga bisa mengedit program yang menurut anda ada kesalahan kesalahn atau tertinggal.\
+1T﻿idak hanya membuat saja,selain itu anda juga bisa mengedit program yang menurut anda ada kesalahan kesalahn atau tertinggal.\
 Untuk mengedit sebuah program, ikuti **langkah-langkah** umum berikut.
 
 1. **Masuk:** Masuk ke akun admin
