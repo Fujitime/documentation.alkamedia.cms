@@ -16,7 +16,8 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-Mengedit pengguna adalah proses mengubah atau memperbarui informasi yang terkait dengan akun atau profil pengguna dalam suatu sistem, aplikasi, atau platform. Langkah-langkah ini memungkinkan pengguna untuk memperbarui informasi pribadi, preferensi, atau pengaturan yang relevan dengan pengalaman mereka dalam menggunakan layanan tersebut.\
+j﻿ika anda ingin mengubah sandi atau apapun yang terkait dalam akun. fitur ini dapat mengedit suatu kesalahan atau merubah sesuatu yang anda inginkan dalam akun yang anda buat.\
+Langkah-langkah ini memungkinkan pengguna untuk memperbarui informasi pribadi, preferensi, atau pengaturan yang relevan dengan pengalaman mereka dalam menggunakan layanan tersebut.\
 **Untuk mengedit pengguna (user), langkah-langkahnya sebagai berikut;**
 
 1. **Masuk ke Akun Admin**
