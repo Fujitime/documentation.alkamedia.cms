@@ -15,4 +15,4 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-Memberikan nilai kepada siswa adalah bagian penting dari proses pendidikan. Penilaian membantu mengukur pemahaman siswa terhadap materi dan kinerja mereka secara keseluruhan dalam suatu kursus.
+f﻿itur ini memberikan nilai kepada siswa yang mengerjakan tugas pada kelas kelas nya.dan bisa mengecek tugas yang dikerjakan oleh siswa,sehingga tau bahwa siswa ini mengerjakan tugas. Penilaian membantu mengukur pemahaman siswa terhadap materi dan kinerja mereka secara keseluruhan dalam suatu kursus.
