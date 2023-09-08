@@ -22,4 +22,12 @@ Pada website alkademi.id, terdapat fitur yang disebut "checkout absensi" yang be
 
 U﻿ntuk melakukan proses checkout  silahkan ikuti langkah-langkah berikut:
 
-1
+**1.﻿ Klik Menu Kelas :** Setelah login menggunakan akun student dan membuka aplikasi , cari dan klik opsi "KELAS" di menu navigasi.
+
+**2﻿. Pilih Kelas :** Setelah masuk ke halaman kelas, silahkan anda pilih kelas yang akan anda kirimkan absen.
+
+**3. Klik Absen :** dengan anda menekan tombol Absen Anda akan di Arahkan ke halaman Pengisian absen.
+
+**4﻿. konfirmasi :** pastikan posees Checkin sudah selesai.
+
+**5﻿. selesai :** Klik tombol " Ya Saya Yakin' dan anda sudah berhasil melakukan absensi.
