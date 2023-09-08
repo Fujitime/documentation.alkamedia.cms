@@ -18,7 +18,7 @@ support_mobile: Yes
 ---
 ## Mencari Pengguna
 
-Panduan ini akan membahas seni dan ilmu dalam mencari pengguna di berbagai platform online dan basis data. Kita akan menjelajahi teknik, alat, dan strategi yang dapat membantu Anda menemukan individu dengan efektif dan efisien. Baik Anda berinteraksi di media sosial, jaringan profesional, atau komunitas online lainnya, menguasai keterampilan pencarian pengguna dapat membuka pintu ke koneksi dan peluang berharga. Jadi, mari kita mulai perjalanan untuk menemukan seluk-beluk "Pencarian Pengguna" dan memanfaatkan kekuatan konektivitas digital di dunia yang semakin terhubung.\
+f﻿itur ini memudahkan anda dalam mencari akun yang anda buat.seperti anda sesudah membuat lalu ingin tahu bahwa akun anda sudah di buat, lalu aplikasi ini akan mengarahkan ke bagian tabel atau akun akun yang sudah dibuat.pasti anda akan bingung untuk mencari satu persatu,maka dari itu alkademi menyediakan fitur pencarian.\
 \
 Jika Anda perlu menemukan pengguna tertentu dalam sistem, ikuti langkah-langkah berikut:
 
