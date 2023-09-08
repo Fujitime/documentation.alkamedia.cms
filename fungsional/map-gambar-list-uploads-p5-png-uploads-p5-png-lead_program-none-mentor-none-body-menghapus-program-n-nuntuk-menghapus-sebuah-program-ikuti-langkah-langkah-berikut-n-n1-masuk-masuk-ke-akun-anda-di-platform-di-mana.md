@@ -18,7 +18,7 @@ support_mobile: Yes
 ---
 ## Menghapus Program
 
-f﻿itur ini dapat menghapus sebuah program yang sudah dibuat atau memang ingin dihapus dikarnakan sudah tidak penting.\
+2f﻿itur ini dapat menghapus sebuah program yang sudah dibuat atau memang ingin dihapus dikarnakan sudah tidak penting.\
 Proses penghapusan program ini melibatkan tindakan hati-hati dan pertimbangan yang matang. Sebuah program yang dihapus harus dikelola dengan baik agar tidak berdampak negatif pada pengguna atau data terkait. Langkah-langkah ini melibatkan pencopotan akses, pemindahan data atau informasi yang relevan, dan komunikasi yang jelas kepada semua pihak yang terlibat.\
 \
 Untuk menghapus sebuah program di alkademi, ikuti langkah-langkah berikut:
