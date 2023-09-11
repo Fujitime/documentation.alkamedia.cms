@@ -16,7 +16,7 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-F﻿itur ini dimana anda bisa membuat kelas kelas yang mungkin anda gunakan utunk mengases soal soal atau materi untuk diberikan kepada siswa.Dengan Alkademi, Anda memiliki alat yang kuat untuk membuat lingkungan belajar online yang interaktif dan terstruktur. Berikut adalah langkah-langkah untuk membuat kelas di aplikasi Alkademi:\
+F﻿itur ini dimana anda bisa membuat kelas kelas yang mungkin anda gunakan untuk mengases soal soal atau materi untuk diberikan kepada siswa.Dengan Alkademi, Anda memiliki alat yang kuat untuk membuat lingkungan belajar online yang interaktif dan terstruktur. Berikut adalah langkah-langkah untuk membuat kelas di aplikasi Alkademi:\
 \
 **1. a﻿kses login;** pertamana tama anda login dimana anda bisa membuat kelas.\
 **2. b﻿uat kelas;** cara menu kelas dan di sana anda akan menemukan +kelas.\
