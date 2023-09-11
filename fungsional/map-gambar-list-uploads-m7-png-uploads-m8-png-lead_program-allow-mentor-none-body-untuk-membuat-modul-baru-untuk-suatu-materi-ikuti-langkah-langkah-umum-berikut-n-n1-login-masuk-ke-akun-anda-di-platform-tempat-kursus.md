@@ -18,6 +18,7 @@ support_mobile: Yes
 ---
 #### Membuat Module Baru
 
+f﻿itur ini bisa membuat module yang dimana anda dapat melihat module di dalam materi.\
 Untuk membuat modul baru untuk suatu materi, ikuti langkah-langkah umum berikut:
 
 1. **Klik Menu Materi**: Setelah l﻿ogin dan membuka aplikasi , cari dan klik opsi "Materi" di menu navigasi.
