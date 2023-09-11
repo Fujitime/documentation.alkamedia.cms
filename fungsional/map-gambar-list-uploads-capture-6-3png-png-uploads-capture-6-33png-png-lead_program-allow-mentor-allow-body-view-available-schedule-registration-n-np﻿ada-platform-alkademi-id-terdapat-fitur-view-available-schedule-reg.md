@@ -21,5 +21,3 @@ support_mobile: Yes
 P﻿ada platform alkademi.id terdapat fitur View Available Schedule:Registration atau fitur yang berguna untuk melihat jadwal pendaftaran yang tersedia: fitur ini tentu sangat membantu user jika ingin melakukan pendaftaran  pada kelas yang masih membuka pendaftaran.
 
 U﻿ntuk menggunakan fitur tersebut silahkan ikuti langkah-langkah sebagai berikut:
-
-1﻿.
