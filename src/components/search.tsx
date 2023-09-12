@@ -40,7 +40,7 @@ const Search = () => (
         indexName={process.env.GATSBY_ALGOLIA_INDEXNAME!}
       >
         <SearchBox className="w-full mb-4 border-solid border-2 border-sky-500" placeholder='Search Docs'/>
-        <div className='max-h-[30vh] h-auto overflow-y-auto'>
+        <div className='max-h-[70vh] h-auto overflow-y-auto'>
           <Hits hitComponent={DefaultHitComponent} />
         </div>
       </InstantSearch>

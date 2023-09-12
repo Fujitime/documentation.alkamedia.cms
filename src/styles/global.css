@@ -2,22 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  @apply bg-gray-100 dark:bg-gray-900 w-2
 }
-
-html::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-700 rounded-lg border border-solid border-gray-500 dark:border-gray-900 
 }
-
-.no-scrollbar {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
+/* Scrollbar Animation */
+@keyframes scroll-pulse {
+  0% {
+    background-color: #1E40AF;
+    border: 3px solid #111827;
+  }
+  50% {
+    background-color: #ffcc00;
+    border: 3px solid #ffcc00;
+  }
+  100% {
+    background-color: #1E40AF;
+    border: 3px solid #111827;
+  }
 }
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+/* Apply animation to scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  animation: scroll-pulse 3s infinite;
 }
 
 body.dark {
