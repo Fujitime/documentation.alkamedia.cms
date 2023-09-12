@@ -1,7 +1,9 @@
 ---
 menu: Studio
 fungsional: "Create an Studio "
-gambar: []
+gambar:
+  - uploads/z26.png
+  - uploads/z27.png
 super_admin: Allow
 admin: Allow
 mentor: None
