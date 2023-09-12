@@ -13,6 +13,9 @@ const query = `
             menu
           }
           id
+          internal {
+            contentDigest
+          }
         }
       }
     }
@@ -29,10 +32,14 @@ interface Data {
           menu: string;
         };
         id: string;
+        internal: {
+          contentDigest: string;
+        };
       };
     }>;
   };
 }
+
 const queries = [
   {
     query,
@@ -42,9 +49,11 @@ const queries = [
         html: v.node.html,
         menu: v.node.frontmatter.menu,
         fungsional: v.node.frontmatter.fungsional,
-        id: v.node.id} 
+        id: v.node.id,
+        internal: v.node.internal,
+      } 
     }),
-    indexName: 'dev.documentation.alkamedia.cms',
+    indexName: process.env.ALGOLIA_INDEXNAME!,
     settings: {
     },
     mergeSettings: false,
