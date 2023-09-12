@@ -26,9 +26,9 @@ const Sidebar: React.FC<{ data: Array<string>, state: [string, React.Dispatch<Re
 
   return (
     <>
-    <nav className="fixed backdrop-blur transition-colorsdark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
+    <nav className="fixed backdrop-blur transition-colors dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
       <div>
-        <Link to="/" className="flex items-center text-gray-900 dark:text-white group">
+        <Link to="/" className="flex items-center">
         <StaticImage src="../images/alkamedia-logo-light.png" alt="Logo" layout="fixed" height={36} className="dark:hidden"/>
         <StaticImage src="../images/alkamedia-logo-dark.png" alt="Logo" layout="fixed" height={36} className="hidden dark:block"/>
         </Link>
