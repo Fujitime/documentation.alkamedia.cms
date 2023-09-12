@@ -18,7 +18,7 @@ support_mobile: Yes
 ---
 #### Menghapus Materi
 
-f﻿itur ini berfungsi untuk menghapus sebuah materi yang sudah tidak terpakai atau kesalahan dalam membuat materi.\
+F﻿itur ini berfungsi untuk menghapus sebuah materi yang sudah tidak terpakai atau kesalahan dalam membuat materi.\
 Untuk menghapus suatu materi, ikuti langkah-langkah umum berikut:
 
 1. **Klik Menu Materi:** Arahkan ke bagian materi mengelola materi-materi Anda.
