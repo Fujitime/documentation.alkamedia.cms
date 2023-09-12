@@ -24,4 +24,4 @@ U﻿ntuk menggunakan fitur tersebut silahkan ikuti langkah-langkah sebagai berik
 
 **1.﻿ Klik Menu Jadwal Kegiatan:** Setelah login dan membuka aplikasi , cari dan klik opsi "Jadwal Kegitan" di menu navigasi.
 
-**2﻿. Lihat Jadwal Pendaftaran :** klik pada kelas dengan tanda bulat hijau pada bagian sampingnya
+**2﻿. Lihat Jadwal Pendaftaran :** klik kelas dengan tanda bulat hijau pada bagian sampingnya
