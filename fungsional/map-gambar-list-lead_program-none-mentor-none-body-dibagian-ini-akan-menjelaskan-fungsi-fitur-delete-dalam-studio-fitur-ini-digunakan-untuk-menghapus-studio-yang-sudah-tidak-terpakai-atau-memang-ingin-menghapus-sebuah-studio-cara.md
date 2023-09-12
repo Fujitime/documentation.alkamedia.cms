@@ -1,7 +1,8 @@
 ---
 menu: Studio
 fungsional: "Delete a studio "
-gambar: []
+gambar:
+  - uploads/z30.png
 super_admin: Allow
 admin: Allow
 mentor: None
