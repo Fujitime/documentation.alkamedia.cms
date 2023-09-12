@@ -16,7 +16,7 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-## Mengedit Kategori dalam Bank Soal
+#### Mengedit Kategori 
 
 Dalam pengelolaan bank soal, langkah-langkah mengedit kategori adalah sebagai berikut:
 
