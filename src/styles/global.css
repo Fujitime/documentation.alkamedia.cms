@@ -31,7 +31,7 @@ body.light {
 }
 
 .ais-SearchBox-input {
-  @apply w-full py-3.5 rounded-lg bg-gray-200 focus:bg-gray-100 dark:bg-gray-700 focus:dark:bg-gray-800 text-gray-700 dark:text-gray-50 focus:shadow-md px-4 focus:outline outline-none border-none;
+  @apply w-full py-3.5 bg-gray-200 focus:bg-gray-100 dark:bg-gray-700 focus:dark:bg-gray-800 text-gray-700 dark:text-gray-50 focus:shadow-md px-4 focus:outline outline-none border-none;
 }
 
 .ais-SearchBox-resetIcon{
@@ -43,9 +43,10 @@ body.light {
 }
 
 .ais-Highlight-highlighted{
-  @apply dark:text-white bg-transparent
+  @apply text-indigo-400 bg-indigo-500
 }
 
 .animate__fast{
   --animate-duration: 0.3s;
 }
+
