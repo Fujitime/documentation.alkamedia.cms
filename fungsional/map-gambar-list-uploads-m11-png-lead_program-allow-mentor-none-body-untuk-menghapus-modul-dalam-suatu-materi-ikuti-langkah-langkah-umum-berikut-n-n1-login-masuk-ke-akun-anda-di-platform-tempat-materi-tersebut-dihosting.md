@@ -18,7 +18,7 @@ support_mobile: Yes
 ---
 #### Menghapus Module
 
-f﻿itur ini bisa menghapus module yang sudah anda buat,contoh ada kesalahan dalam membuat,tidak igin dipakai lagi,atau tidak sengaja kebuat.itu bisa menggunakan fitur delete ini.\
+F﻿itur ini bisa menghapus module yang sudah anda buat,contoh ada kesalahan dalam membuat,tidak igin dipakai lagi,atau tidak sengaja kebuat.itu bisa menggunakan fitur delete ini.\
 Untuk menghapus modul dari suatu materi, ikuti langkah-langkah simpel berikut:
 
 1. **Akses Materi**: Arahkan ke bagian materi di mana modul yang ingin Anda hapus berada.
