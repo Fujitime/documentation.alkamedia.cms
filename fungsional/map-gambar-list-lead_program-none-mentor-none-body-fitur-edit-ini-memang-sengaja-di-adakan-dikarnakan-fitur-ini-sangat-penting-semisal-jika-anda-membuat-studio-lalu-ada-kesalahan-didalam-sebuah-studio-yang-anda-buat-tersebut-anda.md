@@ -1,7 +1,9 @@
 ---
 menu: Studio
 fungsional: "edit a studio "
-gambar: []
+gambar:
+  - uploads/z28.png
+  - uploads/z29.png
 super_admin: Allow
 admin: Allow
 mentor: None
