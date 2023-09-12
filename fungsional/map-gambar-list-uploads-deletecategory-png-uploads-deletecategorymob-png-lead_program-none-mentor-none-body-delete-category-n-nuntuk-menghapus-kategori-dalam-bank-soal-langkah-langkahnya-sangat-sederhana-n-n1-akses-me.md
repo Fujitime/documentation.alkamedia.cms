@@ -20,7 +20,7 @@ support_mobile: Yes
 
 Untuk menghapus kategori dalam Bank Soal, langkah-langkahnya sangat sederhana:
 
-1. **Akses Menu Formulir**: Pertama-tama, klik menu "Formulir" di dashboard utama.
+1. **Akses Menu Formulir**: Pertama-tama, klik menu "Formulir" dan pilih menu "Bank Soal".
 2. **Pilih Bank Soal:** Dalam menu formulir, cari dan pilih opsi "Bank Soal." Ini akan membawa Anda ke halaman pengelolaan bank soal.
 3. **Temukan Kategori yang Ingin Dihapus:** Di halaman pengelolaan bank soal, cari kategori yang ingin Anda hapus dari daftar yang tersedia.
 4. **Hapus Kategori:** Klik ikon tong sampah atau opsi "Hapus" yang terkait dengan kategori yang ingin Anda hapus.
