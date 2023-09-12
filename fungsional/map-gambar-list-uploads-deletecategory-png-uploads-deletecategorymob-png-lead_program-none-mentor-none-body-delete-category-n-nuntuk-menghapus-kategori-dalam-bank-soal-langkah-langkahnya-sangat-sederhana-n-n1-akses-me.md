@@ -16,7 +16,7 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-# Delete Category
+#### Delete Category
 
 Untuk menghapus kategori dalam Bank Soal, langkah-langkahnya sangat sederhana:
 
