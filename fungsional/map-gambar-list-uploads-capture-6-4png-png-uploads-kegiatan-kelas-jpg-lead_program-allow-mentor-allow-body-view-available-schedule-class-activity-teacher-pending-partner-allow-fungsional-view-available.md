@@ -24,4 +24,4 @@ U﻿ntuk menggunakan fitur tersebut silahkan ikuti langkah-langkah sebagai berik
 
 **1.﻿ Klik Menu Jadwal Kegiatan :** Setelah login dan membuka aplikasi, cari dan klik opsi "Jadwal Kegiatan" di menu navigasi.
 
-**2﻿. Lihat Jadwal kegiatan kelas :** Setelah masuk pada menu "jawal kegiatan"
+**2﻿. Lihat Jadwal kegiatan kelas :** Setelah masuk pada menu "jawal kegiatan" cari kegiatan kelas dan klik pada modal popup.
