@@ -39,7 +39,7 @@ const Search = () => (
         searchClient={searchClient as SearchClient}
         indexName={process.env.GATSBY_ALGOLIA_INDEXNAME!}
       >
-        <SearchBox className="w-full mb-4" placeholder='Search documentation'/>
+        <SearchBox className="w-full mb-4 border-solid border-2 border-sky-500" placeholder='Search documentation'/>
         <Hits hitComponent={DefaultHitComponent} />
       </InstantSearch>
   </>
