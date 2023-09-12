@@ -16,8 +16,6 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-Dalam panduan ini, Anda akan mempelajari berbagai fungsionalitas yang terkait dengan materi dalam sistem kami. Ini termasuk m﻿embuat modul dan mengedit materi, , serta membuat materi dan modul baru.
-
 #### Membuat Materi Baru
 
 Untuk membuat materi baru di platform kami, ikuti langkah-langkah di bawah ini:
