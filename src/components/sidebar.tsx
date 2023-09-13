@@ -32,13 +32,18 @@ const Sidebar: React.FC<{ data: Array<string>, pageName: string, state: [string,
   return (
     <>
     <nav className="fixed backdrop-blur transition-colors dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-16 flex justify-between">
-      <div>
+      <div className="flex items-center">
         <Link to="/" className="flex items-center">
+        <div className="hidden sm:block">
         <StaticImage src="../images/alkamedia-logo-light.png" alt="Logo" layout="fixed" height={36} className="dark:hidden"/>
         <StaticImage src="../images/alkamedia-logo-dark.png" alt="Logo" layout="fixed" height={36} className="hidden dark:block"/>
+        </div>
+        <StaticImage src="../../static/icons/alkamedia.png" alt="Logo" layout="fixed" height={36} className="block sm:hidden"/>
         </Link>
       </div>
+        <div className="ml-auto my-auto">
       <ThemeToggle />
+        </div>
         <button type="button" onClick={() => setSidebar(!showSidebar)} className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span className="sr-only">Open sidebar</span>
           <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
