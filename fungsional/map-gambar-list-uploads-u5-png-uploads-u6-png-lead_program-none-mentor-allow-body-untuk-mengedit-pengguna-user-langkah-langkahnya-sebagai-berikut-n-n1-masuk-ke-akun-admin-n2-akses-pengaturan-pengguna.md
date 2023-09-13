@@ -2,8 +2,8 @@
 menu: User
 fungsional: Edit User
 gambar:
-  - uploads/u5.png
-  - uploads/u6.png
+  - uploads/z35.png
+  - uploads/z34.png
 super_admin: Allow
 admin: Allow
 mentor: Allow
