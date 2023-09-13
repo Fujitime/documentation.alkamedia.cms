@@ -3,7 +3,7 @@ menu: Program
 fungsional: Delete Program
 gambar:
   - uploads/p5.png
-  - uploads/p5.png
+  - uploads/z41.png
 super_admin: Allow
 admin: Allow
 mentor: None
