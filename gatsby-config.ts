@@ -74,10 +74,25 @@ const config: GatsbyConfig = {
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
     "gatsby-plugin-dark-mode",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `png`, `jpg`],
+          placeholder: `none`,
+          breakpoints: [750, 1080, 1366, 1920],
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        }
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
