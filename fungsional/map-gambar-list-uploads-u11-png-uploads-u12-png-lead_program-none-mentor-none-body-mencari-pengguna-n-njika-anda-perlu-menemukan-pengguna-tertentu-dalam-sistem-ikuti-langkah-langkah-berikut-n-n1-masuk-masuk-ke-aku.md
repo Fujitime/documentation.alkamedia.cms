@@ -2,8 +2,8 @@
 menu: User
 fungsional: "Search User "
 gambar:
-  - uploads/u11.png
-  - uploads/u12.png
+  - uploads/z36.png
+  - uploads/z37.png
 super_admin: Allow
 admin: Allow
 mentor: None
