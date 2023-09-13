@@ -3,7 +3,7 @@ menu: Program
 fungsional: View Program
 gambar:
   - uploads/p7.png
-  - uploads/p8.png
+  - uploads/z39.png
 super_admin: Allow
 admin: Allow
 mentor: None
