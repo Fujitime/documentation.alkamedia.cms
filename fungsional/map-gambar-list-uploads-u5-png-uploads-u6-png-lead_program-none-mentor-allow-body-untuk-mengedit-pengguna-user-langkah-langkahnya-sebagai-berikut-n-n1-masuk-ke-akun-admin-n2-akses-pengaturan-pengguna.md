@@ -16,7 +16,7 @@ industri: Pending
 student: None
 support_mobile: Yes
 ---
-j﻿ika anda ingin mengubah sandi atau apapun yang terkait dalam akun. fitur ini dapat mengedit suatu kesalahan atau merubah sesuatu yang anda inginkan dalam akun yang anda buat.\
+J﻿ika anda ingin mengubah sandi atau apapun yang terkait dalam akun. fitur ini dapat mengedit suatu kesalahan atau merubah sesuatu yang anda inginkan dalam akun yang anda buat.\
 Langkah-langkah ini memungkinkan pengguna untuk memperbarui informasi pribadi, preferensi, atau pengaturan yang relevan dengan pengalaman mereka dalam menggunakan layanan tersebut.\
 **Untuk mengedit pengguna (user), langkah-langkahnya sebagai berikut;**
 
