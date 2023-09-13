@@ -3,7 +3,7 @@ menu: Program
 fungsional: Create Program
 gambar:
   - uploads/p1.png
-  - uploads/p2.png
+  - uploads/z38.png
 super_admin: Allow
 admin: Allow
 mentor: None
