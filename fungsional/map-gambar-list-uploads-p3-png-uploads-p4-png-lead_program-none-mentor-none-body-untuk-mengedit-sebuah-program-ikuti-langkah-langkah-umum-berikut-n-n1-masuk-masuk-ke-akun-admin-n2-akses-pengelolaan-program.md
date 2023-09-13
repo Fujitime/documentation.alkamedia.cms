@@ -3,7 +3,7 @@ menu: Program
 fungsional: Edit a Program
 gambar:
   - uploads/p3.png
-  - uploads/p4.png
+  - uploads/z40.png
 super_admin: Allow
 admin: Allow
 mentor: None
