@@ -2,23 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  @apply bg-gray-100 dark:bg-gray-900 w-2
 }
-
-html::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-700 rounded-lg border border-solid border-gray-500 dark:border-gray-900 
 }
-
-.no-scrollbar {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
+/* Scrollbar Animation */
+@keyframes scroll-pulse {
+  0% {
+    background-color: #1E40AF;
+    border: 3px solid #111827;
+  }
+  50% {
+    background-color: #ffcc00;
+    border: 3px solid #ffcc00;
+  }
+  100% {
+    background-color: #1E40AF;
+    border: 3px solid #111827;
+  }
 }
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+/* Apply animation to scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  animation: scroll-pulse 3s infinite;
 }
+/* 
+.light-scrollbar::-webkit-scrollbar {
+  @apply w-[8px] bg-gray-100
+}
+.dark-scrollbar::-webkit-scrollbar {
+  @apply w-[8px] bg-gray-800
+} */
 
 body.dark {
   --primary: #111827;
@@ -31,7 +48,7 @@ body.light {
 }
 
 .ais-SearchBox-input {
-  @apply w-full py-3.5 rounded-lg bg-gray-200 focus:bg-gray-100 dark:bg-gray-700 focus:dark:bg-gray-800 text-gray-700 dark:text-gray-50 focus:shadow-md px-4 focus:outline outline-none border-none;
+  @apply w-full py-3.5 pr-4 bg-gray-200 dark:bg-gray-900  text-gray-700 dark:text-gray-50 focus:outline outline-none border-none;
 }
 
 .ais-SearchBox-resetIcon{
@@ -43,9 +60,13 @@ body.light {
 }
 
 .ais-Highlight-highlighted{
-  @apply dark:text-white bg-transparent
+  @apply text-indigo-400 bg-indigo-500
+}
+.ais-SearchBox-loadingIndicator{
+  @apply hidden
 }
 
 .animate__fast{
   --animate-duration: 0.3s;
 }
+
