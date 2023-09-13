@@ -3,7 +3,7 @@ menu: User
 fungsional: Filter by role
 gambar:
   - uploads/u9.png
-  - uploads/u10.png
+  - uploads/z33.png
 super_admin: Allow
 admin: Allow
 mentor: None
