@@ -29,6 +29,13 @@
 ::-webkit-scrollbar-thumb:hover {
   animation: scroll-pulse 3s infinite;
 }
+/* 
+.light-scrollbar::-webkit-scrollbar {
+  @apply w-[8px] bg-gray-100
+}
+.dark-scrollbar::-webkit-scrollbar {
+  @apply w-[8px] bg-gray-800
+} */
 
 body.dark {
   --primary: #111827;
@@ -41,7 +48,7 @@ body.light {
 }
 
 .ais-SearchBox-input {
-  @apply w-full py-3.5 bg-gray-200 focus:bg-gray-100 dark:bg-gray-700 focus:dark:bg-gray-800 text-gray-700 dark:text-gray-50 focus:shadow-md px-4 focus:outline outline-none border-none;
+  @apply w-full py-3.5 pr-4 bg-gray-200 dark:bg-gray-900  text-gray-700 dark:text-gray-50 focus:outline outline-none border-none;
 }
 
 .ais-SearchBox-resetIcon{
@@ -54,6 +61,9 @@ body.light {
 
 .ais-Highlight-highlighted{
   @apply text-indigo-400 bg-indigo-500
+}
+.ais-SearchBox-loadingIndicator{
+  @apply hidden
 }
 
 .animate__fast{

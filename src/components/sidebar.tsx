@@ -48,7 +48,7 @@ const Sidebar: React.FC<{ data: Array<string>, pageName: string, state: [string,
       </nav>
 
       <aside className={(showSidebar ? "" : "-translate-x-full") + " fixed top-0 left-0 w-[14.2rem] z-20 sm:w-64 h-screen transition-transform sm:translate-x-0"} aria-label="Sidebar">
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-100 dark:bg-gray-800">
+        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul className="space-y-2 font-medium pt-14">
               <li className="mb-4">
               <button
