@@ -3,7 +3,7 @@ menu: User
 fungsional: Update Profile
 gambar:
   - uploads/u7.png
-  - uploads/u8.png
+  - uploads/z32.png
 super_admin: Allow
 admin: Allow
 mentor: Allow
