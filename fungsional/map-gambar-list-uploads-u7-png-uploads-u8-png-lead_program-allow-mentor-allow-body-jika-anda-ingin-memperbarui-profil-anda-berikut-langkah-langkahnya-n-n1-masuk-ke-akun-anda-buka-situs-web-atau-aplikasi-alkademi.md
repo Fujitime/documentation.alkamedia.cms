@@ -16,7 +16,7 @@ industri: Pending
 student: Allow
 support_mobile: Yes
 ---
-profil online Anda sering kali merupakan kesan pertama yang Anda berikan kepada orang lain.  tidak hanya menempatkan profile saja, fitur ini bisa mengubah suatu profile anda.\
+Profil online Anda sering kali merupakan kesan pertama yang Anda berikan kepada orang lain.  tidak hanya menempatkan profile saja, fitur ini bisa mengubah suatu profile anda.\
 \
 Jika Anda ingin memperbarui profil Anda,**berikut langkah langkahnya;**
 
