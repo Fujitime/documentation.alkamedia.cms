@@ -60,7 +60,7 @@ body.light {
 }
 
 .ais-Highlight-highlighted{
-  @apply text-indigo-400 bg-indigo-500
+  @apply text-indigo-500 bg-transparent
 }
 .ais-SearchBox-loadingIndicator{
   @apply hidden

@@ -15,7 +15,7 @@ const Sidebar: React.FC<{ data: Array<string>, pageName: string, state: [string,
   let dirs: (NestedDir|string)[] = data.filter(menu => !menu.includes("("))
   const roleColor = (role: string) => {
     const colorMap: Record<string, string> = {
-      "super_admin": "#7f1d1d",
+      "super_admin": "#292524",
       "admin": "#00FF00",
       "mentor": "#172554",
       "teacher": "#3b0764",

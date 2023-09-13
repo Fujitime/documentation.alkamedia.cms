@@ -79,17 +79,17 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string, all: Ar
         </svg>
       </button>
       <Sidebar data={pageContext.all} pageName="Sidebar" state={[role, setRole]} />
-      <div className="container sm:ml-64 mr-auto w-auto px-11 pt-16 pb-2">
+      <div className="container sm:ml-64 mr-auto w-auto px-11 sm:pt-[8rem] pt-[7rem] pb-2">
         <div className="w-[90%] sm:max-w-[94%] mt-8 mx-auto dark:text-gray-100">
           <button type="submit" onClick={() => setModal(!modal)} className="w-full font-thin text-xl text-gray-700 dark:text-gray-300 text-left border-b-[1px] border-gray-500 dark:border-gray-400 flex items-center px-1">
-          <svg width="19" height="15" className="inline-block mb-2" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+          <svg width="20" height="20" className="inline-block mb-2" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
             <span className="text-[1rem] mb-2 sm:ml-4 ">Search</span>
           </button>
         </div>
         { modal ? (
           <div className="container sm:-ml-32 flex justify-center" >
-          <div className="max-h-[100vh] animate__animated animate__fadeIn animate__fast w-full _sm:left-0 sm:max-w-[40%] absolute z-[60] top-[4rem] sm:top-[3rem] h-auto bg-slate-100 dark:bg-gray-800/95 rounded px-2 py-1 pb-8 sm:pb-2.5">
+          <div className="max-h-[100vh] animate__animated animate__fadeIn animate__fast w-full _sm:left-0 sm:max-w-[40%] absolute z-[60] top-[5rem] h-auto bg-slate-100 dark:bg-gray-800/95 rounded px-2 py-1 pb-8 sm:pb-2.5">
             <div className="flex w-full justify-end mb-2">
               <button type="button" className="text-gray-600 dark:text-gray-300 bg-transparent hover:bg-gray-200 hover:text-gray-700 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-900 dark:hover:text-white" onClick={() => setModal(false)}>
                 <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
