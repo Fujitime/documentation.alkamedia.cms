@@ -3,7 +3,7 @@ menu: User
 fungsional: Create account
 gambar:
   - uploads/u1.png
-  - uploads/u2.png
+  - uploads/z31.png
 super_admin: Allow
 admin: Allow
 mentor: None
