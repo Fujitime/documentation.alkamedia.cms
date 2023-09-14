@@ -33,4 +33,22 @@ interface Data {
     };
   }
   
-export {Data, FrontMatter, NestedDir}
+interface DataNode {
+  docs: {
+    edges: Array<{
+      node: {
+        html: string;
+        frontmatter: {
+          fungsional: string;
+          menu: string;
+        };
+        id: string;
+        internal: {
+          contentDigest: string;
+        };
+      };
+    }>;
+  };
+}
+
+export {Data, FrontMatter, NestedDir, DataNode}

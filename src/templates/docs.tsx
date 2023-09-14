@@ -1,10 +1,11 @@
 import * as React from "react";
 import { useEffect } from "react";
+import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import Sidebar from "../components/Sidebar"
 import Search from "../components/Search";
-import { FrontMatter, Data } from "../type";
+import { FrontMatter, Data } from "../types";
 import Navbar from "../components/Navbar"
 
 import "animate.css"
@@ -167,3 +168,4 @@ export const query = graphql`query($category: String) {
 }`
 
 
+export const Head: HeadFC = () => <title>Documentation</title>
