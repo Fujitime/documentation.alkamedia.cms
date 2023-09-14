@@ -10,7 +10,6 @@ const Navbar : React.FC<{showSidebar: boolean; setShowSidebar: React.Dispatch<Re
     const [showDropdown, setShowDropdown] = React.useState<string | null>(null);
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
-        console.log("hahaha")
       };
      return (
         <nav className="fixed backdrop-blur transition-colors dark:border-slate-50/[0.06] bg-white/10 supports-backdrop-blur:bg-white/60 dark:bg-gray-700/[0.8] top-0 z-30 w-full p-4 h-20 flex justify-between">

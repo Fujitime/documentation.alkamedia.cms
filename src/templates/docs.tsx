@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useEffect } from "react";
-import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import Sidebar from "../components/Sidebar"
@@ -167,4 +166,4 @@ export const query = graphql`query($category: String) {
   }
 }`
 
-export const Head: HeadFC = () => <title>Documentations</title>
+
