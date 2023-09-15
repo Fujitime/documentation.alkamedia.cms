@@ -3,47 +3,20 @@ import { useEffect } from "react";
 import type { HeadFC } from "gatsby"
 import { Link, graphql } from "gatsby"
 import Gallery from '@browniebroke/gatsby-image-gallery'
-import Sidebar from "../components/sidebar"
-import Search from "../components/search";
+import Sidebar from "../components/Sidebar"
+import Search from "../components/Search";
+import { FrontMatter, Data } from "../types";
+import Navbar from "../components/Navbar"
+
 import "animate.css"
 
 const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
-interface FrontMatter {
-  fungsional: string;
-  gambar: Array<{
-    childImageSharp: any
-  }> | [];
-  super_admin: string;
-  admin: string;
-  mentor: string;
-  teacher: string;
-  partner: string;
-  lead_program: string;
-  lead_region: string;
-  content_writer: string;
-  industri: string;
-  student: string;
-  support_mobile: string;
-}
-
-
-interface Data {
-  docs: {
-    edges: Array<{
-      node: {
-        html: string;
-        frontmatter: FrontMatter;
-        id: string;
-      };
-    }>;
-  };
-}
-
 const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string, all: Array<string> }}> = ({data, pageContext}) => {
   const [role, setRole] = React.useState<string | keyof FrontMatter>("all");
+  const [showSidebar, setShowSidebar] = React.useState(false);
   const [showBackToTop, setShowBackToTop] = React.useState(false);
   const [modal, setModal] = React.useState(false);
 
@@ -78,8 +51,9 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string, all: Ar
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
         </svg>
       </button>
-      <Sidebar data={pageContext.all} pageName="Sidebar" state={[role, setRole]} />
-      <div className="container sm:ml-64 mr-auto w-auto px-11 sm:pt-[8rem] pt-[7rem] pb-2">
+      <Navbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} data={[]} pageName={""} state={[role, setRole]} />
+      <Sidebar data={pageContext.all} pageName="Sidebar" state={[role, setRole]} showSidebar={showSidebar} />
+      <div className="container sm:ml-64 mr-auto w-auto px-11 pt-20 pb-2">
         <div className="w-[90%] sm:max-w-[94%] mt-8 mx-auto dark:text-gray-100">
           <button type="submit" onClick={() => setModal(!modal)} className="w-full font-thin text-xl text-gray-700 dark:text-gray-300 text-left border-b-[1px] border-gray-500 dark:border-gray-400 flex items-center px-1">
           <svg width="20" height="20" className="inline-block mb-2" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -102,19 +76,20 @@ const IndexPage: React.FC<{ data: Data, pageContext: { pageName: string, all: Ar
           </div>
           </div>
         ) : (<></>)}
-        <div className="max-h-auto mt-8 ml-8 mb-3 text-gray-700 dark:text-gray-300">
-          <h1 className="font-semibold text-4xl capitalize mb-1 my-5 ">{pageContext.pageName}</h1>
+          <div className="max-h-auto mx-auto mt-8 sm:ml-16 md:ml-10 ml-1 mb-3 text-gray-700 dark:text-gray-300">
+          <h1 className="font-semibold sm:text-4xl text-3xl  capitalize mb-1 my-5 ">{pageContext.pageName}</h1>
             <ul className="max-w-md gap-1 text-gray-500 list-none dark:text-gray-400">
-            {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
-              return (
-                <li key={edge.node.id}>
-                  <Link to={"#" + edge.node.frontmatter.fungsional.trim()} className="hover:text-gray-700 text-xl hover:dark:text-gray-300"><span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{edge.node.frontmatter.fungsional.trim()} </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-        <ul className="ml-8" >
+              {data.docs.edges.filter(edge => role == "all" ? true : edge.node.frontmatter[role as keyof FrontMatter] == "Allow").map(edge => {
+                return (
+                  <li key={edge.node.id}>
+                <Link to={"#" + edge.node.frontmatter.fungsional.trim()} className="hover:text-gray-700 text-xl hover:dark:text-gray-300">
+                  <span className="text-indigo-500 dark:text-indigo-400 mr-[0.05rem]" >#</span>{edge.node.frontmatter.fungsional.trim()} </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        <ul>
           { filtered.length > 0 ? filtered.map(edge => {
             const frontmatter = edge.node.frontmatter
             const images = frontmatter.gambar?.map(v => v.childImageSharp) || [];
@@ -192,4 +167,5 @@ export const query = graphql`query($category: String) {
   }
 }`
 
-export const Head: HeadFC = () => <title>Documentations</title>
+
+export const Head: HeadFC = () => <title>Documentation</title>

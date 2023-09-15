@@ -1,5 +1,6 @@
 import type { GatsbyConfig } from "gatsby";
 import * as dotenv from 'dotenv'
+import { DataNode} from "./src/types";
 dotenv.config();
 
 const query = `
@@ -22,29 +23,11 @@ const query = `
   }
 `
 
-interface Data {
-  docs: {
-    edges: Array<{
-      node: {
-        html: string;
-        frontmatter: {
-          fungsional: string;
-          menu: string;
-        };
-        id: string;
-        internal: {
-          contentDigest: string;
-        };
-      };
-    }>;
-  };
-}
-
 const queries = [
   {
     query,
     queryVariables: {},
-    transformer: ({ data }: { data: Data}) => data.docs.edges.map(v => {
+    transformer: ({ data }: { data: DataNode}) => data.docs.edges.map(v => {
       return {
         html: v.node.html,
         menu: v.node.frontmatter.menu,
